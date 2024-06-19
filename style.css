@@ -1,0 +1,301 @@
+body {
+  font-family: Arial, sans-serif;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url("img/bg bem.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+  background-position: center; /* Menyelaraskan gambar di tengah */
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 888;
+}
+
+.logo-left img,
+.logo-right img {
+  width: 50px;
+  height: auto;
+  margin: 4px 5px;
+}
+
+.title {
+  font-size: 12px;
+  text-align: center;
+  flex-grow: 1;
+  font-family: "Font1", sans-serif;
+}
+
+.text-bem h2 {
+  margin-bottom: -20px;
+  font-size: 28px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.text-bem p {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  text-align: center;
+  color: white;
+}
+.organization-header {
+  margin-top: 6%; /* Ensure space for fixed header */
+  margin-bottom: 80px;
+}
+
+.organization-header img {
+  width: 60%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.288);
+}
+
+.proker {
+  margin: 0 auto;
+  border-radius: 9px;
+  margin-top: 20px;
+  padding: 15px;
+  align-items: center;
+  width: 85%;
+  background-color: #ffffff;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.24);
+}
+.text-proker {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.text-proker h2 {
+  font-size: 25px;
+
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.container-proker {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+.card {
+  width: 340px;
+  height: 240px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.329);
+  margin: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+.card-header.green {
+  background-color: #4caf50;
+}
+.card-header.blue {
+  background-color: #2196f3;
+}
+.card-body {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+  color: white; /* Text color for better readability over the background image */
+}
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+.card-footer .icon {
+  width: 36px;
+  height: 26px;
+  background-color: #dddddd;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.card-footer .sertifikat {
+  font-size: 15px;
+  width: auto;
+  height: 24px;
+  padding: 5px;
+  color: black;
+  background-color: #0cff71;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.card-footer .sertifikat:hover {
+  background-color: #35ec81;
+}
+
+footer {
+  background-color: #525252;
+  color: #fff;
+  padding: 20px 0;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.bawah {
+  width: 100%;
+  max-width: 1200px; /* Optional: jika Anda ingin batasi lebar maksimum */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left p {
+  margin: 0;
+}
+.footer-left p a {
+  text-decoration: none;
+  color: rgb(59, 193, 255);
+}
+.footer-left p a:hover {
+  color: white;
+}
+.footer-right nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.footer-right nav ul li {
+  margin-right: 20px;
+}
+
+.footer-right nav ul li:last-child {
+  margin-right: 0;
+}
+
+.footer-right nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-right nav ul li a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 800px){
+  .organization-header {
+    margin-top: 23%; /* Ensure space for fixed header */
+    margin-bottom: 80px;
+  }
+  .organization-header img {
+    width: 80%;
+    height: auto;
+  }
+  footer {
+    bottom: 0;
+    padding: 15px 0; /* Ubah padding agar lebih ramping */
+  }
+  .bawah {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .footer-right nav ul {
+    justify-content: center;
+  }
+  .footer-right nav ul li {
+    margin: 0 10px;
+
+  }
+}
+@media (max-width: 440px) {
+
+  .logo-left img,
+  .logo-right img {
+    width: 40px;
+  }
+
+  .title {
+    font-size: 10px;
+  }
+
+  .text-bem h2 {
+    margin-bottom: -10px;
+    font-size: 20px;
+  }
+  .text-bem p {
+    font-size: 18px;
+  }
+  .organization-header {
+    margin-top: 25%; /* Ensure space for fixed header */
+    margin-bottom: 50px;
+  }
+
+  .organization-header img {
+    width: 85%;
+    height: auto;
+  }
+  .text-proker {
+  margin-bottom: -10px;
+  }
+  .text-proker h2 {
+    font-size: 24px;
+  }
+  footer {
+    padding: 10px 0; /* Ubah padding agar lebih ramping */
+  }
+  .bawah {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .footer-right nav ul {
+    justify-content: center;
+    text-align: center;
+  }
+  .footer-right nav ul li {
+    margin: 0 10px;
+  }
+}

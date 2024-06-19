@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BEM FDA OFFICIAL</title>
+    <link rel="icon" href="img logo/ICON BEM FDA.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div
+        class="logo-left"
+        onclick="window.open('https://uhnsugriwa.ac.id/');"
+        style="cursor: pointer"
+      >
+        <img src="img logo/LOGO UHN.png" alt="Logo Left" />
+      </div>
+      <div class="title">
+        <h1>TTFDA 2024</h1>
+      </div>
+      <div
+        class="logo-right"
+        onclick="window.open('https://www.instagram.com/orkemas_fda/');"
+        style="cursor: pointer"
+      >
+        <img src="img logo/LOGO ORKEMAS.png" alt="Logo Right" />
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="dokum">
+        <img src="img/fesding.jpg" alt="RAKER" />
+      </div>
+      <div class="text-caption">
+        <p>
+          Halo seluruh civitas akademika Fakultas Dharma Acarya, Universitas
+          Hindu Negeri I Gusti Bagus Sugriwa Denpasar! <br />
+          Telah terlaksana FESDING PROJECT (FDA Education & Social Building Project) pada tanggal 10 s/d 12 Juni 2024, yang mengungsung tema “Widya Dharmaning Astra Guna Kauripan” yang berarti “Ilmu Pengetahuan yang Didasari dengan Kebaikan yang menjadi Senjata yang Berguna untuk Kehidupan”
+
+          Kegiatan FESDING PROJECT dilaksanakan selama 3 hari di Desa Adat Pengiangan Kawan
+          Setelah kegitan pembukaan FESDING PROJECT yang bertempat di Balai Banjar Pengiangan Kawan pada hari pertama, kegiatan dilanjutkan dengan Pesraman Kilat oleh mahasiswa jurusan PGSD & PBI yang bertempat di SDN 1 Pengiangan, dan pada sore hari diisi dengan ngayah mereresik di pura dalem pengingan. 
+          Pada hari kedua dilanjutkan dengan acara pesraman kilat yang diisi oleh mahasiswa jurusan PGPAUD, PBSA, PAH dan UKM UPAKARA yang bertempat di SDN 1 Pengiangan, dan pada siang hari kegiatan diisi dengan bakti sosial dan pembagian sembako pada masyarakat Desa Adat Pengiangan Kawan, dan pada sore hari diisi dengan berbagai games menarik pada sesi riang gembira. 
+          Pada hari terakhir, dilaksanakan kegiatan cek kesehatan kepada masyarakat Desa Adat Pengiangan Kawan dengan bekerjasama dengan Puskesmas, sebelum akhirnya kegiatan Fesding Project ditutup secara resmi oleh bapak Bendesa Adat Pengiangan dan penyerahan kenang-kenangan.
+          
+        </p>
+      </div>
+      <div class="elemen-foto">
+        <h2>Foto Dokumentasi</h2>
+        <p>
+          Masukkan Password untuk melihat foto dokumentasinya <br />Kenapa
+          berpasword karena menyangkut privasi seseorang.
+        </p>
+        <div class="input-container">
+          <input type="text" id="password" placeholder="Masukkan Password" />
+          <button onclick="checkPassword()">Submit</button>
+        </div>
+        <div id="message" class="error"></div>
+        <div id="link" class="link iframe-container">
+          <iframe
+            src="https://drive.google.com/embeddedfolderview?id=1Kh9kHPhavGdMTv3aQyU_-FWLLcipwjgJ#grid"
+          ></iframe>
+        
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="bawah">
+        <div class="footer-left">
+          <p>
+            <a href="#" style="cursor: block">&copy; Bem fda 2024</a>
+          </p>
+        </div>
+        <div class="footer-right">
+          <nav>
+            <ul>
+              <li>
+                <a href="/index.html">Home</a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/bemfda?igsh=MWQ3Z2RuN2diZHYycg=="
+                  >Instagram Kami</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function checkPassword() {
+        const password = document.getElementById("password").value;
+        const message = document.getElementById("message");
+        const link = document.getElementById("link");
+
+        if (password === "BEMFDAJAYA") {
+          message.textContent = "";
+          link.style.display = "block";
+        } else {
+          message.textContent = "Password salah, coba lagi.";
+          link.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
