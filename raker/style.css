@@ -193,7 +193,11 @@ footer {
         padding: 0 15px;
         color: white;
       }
-      
+      .elemen-foto {
+        margin-top: 60px;
+        text-align: center;
+        padding: 10px;
+      }
     footer {
         bottom: 0;
         padding: 10px 0; /* Ubah padding agar lebih ramping */
