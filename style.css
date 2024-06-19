@@ -213,7 +213,7 @@ footer {
 @media (max-width: 800px){
   .text-bem h2 {
     margin-bottom: -10px;
-    font-size: 20px;
+    font-size: 25px;
   }
   .organization-header {
     margin-top: 23%; /* Ensure space for fixed header */
