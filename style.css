@@ -213,14 +213,14 @@ footer {
 @media (max-width: 800px){
   .text-bem h2 {
     margin-bottom: -10px;
-    font-size: 25px;
+    font-size: 24px;
   }
   .organization-header {
     margin-top: 23%; /* Ensure space for fixed header */
     margin-bottom: 80px;
   }
   .organization-header img {
-    width: 80%;
+    width: 90%;
     height: auto;
   }
   footer {
