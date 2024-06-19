@@ -50,7 +50,7 @@ header {
 }
 .text-caption p {
   font-size: 20px;
-  text-align: center;
+  text-align: justify;
   padding: 0 50px;
   color: white;
 }
@@ -69,6 +69,7 @@ header {
 }
 .elemen-foto p {
   font-size: 18px;
+
 }
 .input-container {
   display: flex;
@@ -188,7 +189,7 @@ footer {
       }
       .text-caption p {
         font-size: 15px;
-        text-align: center;
+        text-align: justify;
         padding: 0 15px;
         color: white;
       }
@@ -238,7 +239,7 @@ footer {
   }
   .text-caption p {
     font-size: 15px;
-    text-align: center;
+    text-align: justify;
     padding: 0 15px;
     color: white;
   }
