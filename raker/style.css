@@ -1,10 +1,7 @@
 body {
   height: 100vh;
   margin: 0;
-  background-image: url("img/bg bem.jpg");
-  background-attachment: fixed;
-  background-repeat: no-repeat; /* Menghindari pengulangan gambar */
-  background-position: center;
+  background-color: #0059FF;
 }
 header {
   background-color: #333;

@@ -5,12 +5,8 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-image: url("img/bg bem.jpg");
-  background-attachment: fixed;
-  background-repeat: no-repeat; /* Menghindari pengulangan gambar */
-  background-position: center; /* Menyelaraskan gambar di tengah */
+background-color: #0059FF;
 }
-
 header {
   background-color: #333;
   color: #fff;
@@ -65,7 +61,7 @@ header {
   display: block;
   margin: 0 auto;
   border-radius: 10px;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.288);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.11);
 }
 
 .proker {
@@ -215,6 +211,10 @@ footer {
 }
 
 @media (max-width: 800px){
+  .text-bem h2 {
+    margin-bottom: -10px;
+    font-size: 20px;
+  }
   .organization-header {
     margin-top: 23%; /* Ensure space for fixed header */
     margin-bottom: 80px;
