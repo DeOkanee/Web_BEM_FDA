@@ -1,10 +1,6 @@
 body {
-  height: 100vh;
   margin: 0;
-  background-image: url("img/bg bem.jpg");
-  background-attachment: fixed;
-  background-repeat: no-repeat; /* Menghindari pengulangan gambar */
-  background-position: center;
+  background-color: #0059ff;
 }
 header {
   background-color: #333;
@@ -53,7 +49,7 @@ header {
 }
 .text-caption p {
   font-size: 20px;
-  text-align: center;
+  text-align: justify;
   padding: 0 50px;
   color: white;
 }
@@ -66,7 +62,7 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .elemen-foto h2 {
-    font-size: 25px;
+  font-size: 25px;
   margin-bottom: 20px;
   color: #000000;
 }
@@ -177,46 +173,48 @@ footer {
 .footer-right nav ul li a:hover {
   text-decoration: underline;
 }
-@media (max-width: 800px){
-    .container {
-        margin-top: 20%;
-      }
-      .dokum {
-        margin-top: 6%; /* Ensure space for fixed header */
-      }
-      .dokum img {
-        width: 90%;
-        height: auto;
-       
-      }
-      .text-caption p {
-        font-size: 15px;
-        text-align: center;
-        padding: 0 15px;
-        color: white;
-      }
-      
-    footer {
-        bottom: 0;
-        padding: 10px 0; /* Ubah padding agar lebih ramping */
-      }
-      .bawah {
-        flex-direction: column;
-        text-align: center;
-        margin-top: 10px;
-      }
-      .footer-left,
-      .footer-right {
-        width: 100%;
-        margin-bottom: 15px;
-      }
-      .footer-right nav ul {
-        justify-content: center;
-      }
-      .footer-right nav ul li {
-        margin: 0 10px;
-    
-      }
+@media (max-width: 800px) {
+  .container {
+    margin-top: 20%;
+  }
+  .dokum {
+    margin-top: 6%; /* Ensure space for fixed header */
+  }
+  .dokum img {
+    width: 90%;
+    height: auto;
+  }
+  .text-caption p {
+    font-size: 15px;
+    text-align: justify;
+    padding: 0 15px;
+    color: white;
+  }
+  .elemen-foto {
+    margin-top: 80px;
+    text-align: center;
+    padding: 10px;
+  }
+  footer {
+    bottom: 0;
+    padding: 10px 0; /* Ubah padding agar lebih ramping */
+  }
+  .bawah {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .footer-right nav ul {
+    justify-content: center;
+  }
+  .footer-right nav ul li {
+    margin: 0 10px;
+  }
 }
 @media (max-width: 440px) {
   .logo-left img,
@@ -230,34 +228,32 @@ footer {
   .container {
     margin-top: 20%;
   }
-  
+
   .dokum {
     margin-top: 6%; /* Ensure space for fixed header */
   }
   .dokum img {
     width: 90%;
     height: auto;
-   
   }
   .text-caption p {
     font-size: 15px;
-    text-align: center;
+    text-align: justify;
     padding: 0 15px;
     color: white;
   }
   .elemen-foto {
+    margin-top: 60px;
     text-align: center;
     padding: 10px;
   }
   .elemen-foto h2 {
     font-size: 25px;
-
-}
-.elemen-foto p {
+  }
+  .elemen-foto p {
     font-size: 15px;
-
-}
-.input-container {
+  }
+  .input-container {
     display: flex;
     justify-content: center;
     align-items: center;
