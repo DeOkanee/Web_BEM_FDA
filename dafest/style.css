@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: #0059ff;
+  background-color: #ffffff;
 }
 header {
   background-color: #333;
@@ -51,7 +51,8 @@ header {
   font-size: 20px;
   text-align: justify;
   padding: 0 50px;
-  color: white;
+  color: rgb(34, 34, 34);
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .elemen-foto {
@@ -240,7 +241,7 @@ footer {
     font-size: 15px;
     text-align: justify;
     padding: 0 15px;
-    color: white;
+    color: rgb(32, 32, 32);
   }
   .elemen-foto {
     margin-top: 60px;
