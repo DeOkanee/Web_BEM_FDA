@@ -80,7 +80,7 @@ header {
 }
 .organization-header {
   margin-top: 6%; /* Ensure space for fixed header */
-  margin-bottom: 80px;
+  margin-bottom: 5px;
 }
 
 .organization-header img {
@@ -89,7 +89,18 @@ header {
   display: block;
   margin: 0 auto;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.199);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.267);
+}
+
+#welcome-message{
+  text-align: center;
+  margin-bottom: 10%;
+
+}
+#welcome-message h1{
+  color: rgb(27, 27, 27);
+  font-size: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .proker {
@@ -98,7 +109,7 @@ header {
   margin-top: 20px;
   padding: 15px;
   align-items: center;
-  width: 85%;
+  width: 75%;
   background-color: #ffffff;
   text-align: center;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.24);
@@ -255,12 +266,24 @@ footer {
   }
   .organization-header {
     margin-top: 23%; /* Ensure space for fixed header */
-    margin-bottom: 80px;
+    margin-bottom: 16px;
   }
   .organization-header img {
     width: 90%;
     height: auto;
   }
+
+  #welcome-message{
+    text-align: center;
+    margin-bottom: 20%;
+  
+  }
+  #welcome-message h1{
+    color: rgb(27, 27, 27);
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
   footer {
     bottom: 0;
     padding: 15px 0; /* Ubah padding agar lebih ramping */
@@ -284,6 +307,8 @@ footer {
   }
 }
 @media (max-width: 440px) {
+
+
   .wave-header{
     min-height: 100vh;
     width: 100%;
@@ -297,18 +322,23 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 600%;
     z-index: -1;
+    
   }
   .wave-header .svg2{
+    width: 500%;
     position: fixed;
-    bottom: 5%;
+    bottom: 30%;
     right: -30%;
+    
   }
   .wave-header .svg3{
+    width: 500%;
     position: fixed;
-    bottom: 6%;
-    left: 0;
+    bottom: 15%;
+    transform: rotate(5deg);
+    left: -15px;
   }
   .logo-left img,
   .logo-right img {
@@ -328,12 +358,25 @@ footer {
   }
   .organization-header {
     margin-top: 25%; /* Ensure space for fixed header */
-    margin-bottom: 50px;
+    margin-bottom: 19px;
   }
 
   .organization-header img {
     width: 85%;
     height: auto;
+  }
+  #welcome-message{
+    text-align: center;
+    margin-bottom: 20%;
+  
+  }
+  #welcome-message h1{
+    color: rgb(27, 27, 27);
+    font-size: 13px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .proker{
+    width: 90%;
   }
   .text-proker {
   margin-bottom: -10px;
