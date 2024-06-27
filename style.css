@@ -250,15 +250,27 @@ footer {
 }
 
 @media (max-width: 800px){
-  .wave-header .svg2{
+  svg{
     position: fixed;
-    bottom: 6%;
+    bottom: 0;
+    left: 0;
+    width: 400%;
+    z-index: -1;
+    
+  }
+  .wave-header .svg2{
+    width: 300%;
+    position: fixed;
+    bottom: 30%;
     right: -30%;
+    
   }
   .wave-header .svg3{
+    width: 400%;
     position: fixed;
-    bottom: 6%;
-    left: 0;
+    bottom: 10%;
+    transform: rotate(5deg);
+    left: -15px;
   }
   .text-bem h2 {
     margin-bottom: -15px;
@@ -283,7 +295,9 @@ footer {
     font-size: 16px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
-
+.proker{
+  width: 85%;
+}
   footer {
     bottom: 0;
     padding: 15px 0; /* Ubah padding agar lebih ramping */
@@ -376,7 +390,7 @@ footer {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
   .proker{
-    width: 90%;
+    width: 88%;
   }
   .text-proker {
   margin-bottom: -10px;
