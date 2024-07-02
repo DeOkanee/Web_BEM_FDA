@@ -259,7 +259,14 @@ footer {
   text-decoration: underline;
 }
 
-@media (max-width: 800px){
+@media (max-width: 767px){
+  .logo-left img,
+  .logo-right img {
+    width: 40px; /* Sesuaikan ukuran logo */
+  }
+  .title {
+    font-size: 11px;
+  }
   svg{
     position: fixed;
     bottom: 0;
@@ -333,7 +340,6 @@ footer {
 }
 @media (max-width: 440px) {
 
-
   .wave-header{
     min-height: 100vh;
     width: 100%;
@@ -371,7 +377,7 @@ footer {
   }
 
   .title {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .text-bem h2 {
