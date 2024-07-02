@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BEM FDA OFFICIAL</title>
+    <title>BEM FDA OFFICIAL 2024</title>
     <link rel="icon" href="img logo/ICON BEM FDA.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="css/cp.css" />
     <link rel="stylesheet" href="muncul-form.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+   
   </head>
   <body>
     
@@ -21,7 +22,9 @@
         <img src="img logo/LOGO UHN.png" alt="Logo Left" />
       </div>
       <div class="title">
-        <h1>BEM FDA 2024</h1>
+        <h1>BEM FDA OFFICIAL 
+          <img src="img/centangbiru.png" alt="Centang Biru" class="centang-biru">
+        </h1>
       </div>
       <div
         class="logo-right"
@@ -172,23 +175,7 @@
             
         </div>
     </div>
-    <div class="form-container" id="form-container">
-      <span class="close-btn" id="close-btn">&times;</span>
-      <h2>Masukkan</h2>
-      <form action="https://script.google.com/macros/s/AKfycbwr2BNCuEUJnHQ94o04a2EuO807queSlzC_A9dKUxmFaqNg86UEVmgGttW38aCTvPJB/exec" method="post">
-
-        <label for="nama">Nama:</label>
-        <input type="text" id="nama" name="nama" required />
-
-        <label for="semester">Semester:</label>
-        <input type="text" id="semester" name="semester" required />
-    
-        <label for="masukkan">Masukkan Anda:</label>
-        <textarea id="masukkan" name="masukkan" rows="4" required></textarea>
-        
-        <button id="submit" class="btn btn-primary" type="submit">Kirim</button>
-      </form>
-    </div>
+   
 
     <section class="contact">
         <div class="contact-area">
@@ -251,7 +238,23 @@
         </div>
       </section>
      
-      
+      <div class="form-container" id="form-container">
+        <span class="close-btn" id="close-btn">&times;</span>
+        <h2>Masukkan</h2>
+        <form id="myForm" action="https://script.google.com/macros/s/AKfycbwr2BNCuEUJnHQ94o04a2EuO807queSlzC_A9dKUxmFaqNg86UEVmgGttW38aCTvPJB/exec" method="post">
+        
+          <label for="nama">Nama:</label>
+          <input type="text" id="nama" name="nama" required />
+        
+          <label for="semester">Semester:</label>
+          <input type="text" id="semester" name="semester" required />
+        
+          <label for="masukkan">Masukkan Anda:</label>
+          <textarea id="masukkan" name="masukkan" rows="4" required></textarea>
+          
+          <button id="submit" class="btn btn-primary" type="submit">Kirim</button>
+        </form>
+      </div>
      
       
  
@@ -276,19 +279,22 @@
           </div>
         </div>
       </footer>
-      <script>
-        document.getElementById('show-form').addEventListener('click', function() {
-        document.getElementById('form-container').style.display = 'block';
-      });
 
-      document.getElementById('close-btn').addEventListener('click', function() {
-        document.getElementById('form-container').style.display = 'none';
-      });
-        </script>
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+     
+      <script>
+            document.getElementById('show-form').addEventListener('click', function() {
+            document.getElementById('form-container').style.display = 'block';
+          });
+
+          document.getElementById('close-btn').addEventListener('click', function() {
+            document.getElementById('form-container').style.display = 'none';
+          });
+        </script>
+     
       <script>
           $(document).ready(function(){
               Swal.fire({

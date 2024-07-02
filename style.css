@@ -58,12 +58,22 @@ header {
 }
 
 .title {
-  font-size: 12px;
-  text-align: center;
   flex-grow: 1;
   font-family: "Font1", sans-serif;
 }
 
+.title h1 {
+  font-size: 19px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.centang-biru {
+  width: 22px;
+height: auto;
+  margin-left: 5px;
+}
 .text-bem h2 {
   margin-bottom: -20px;
   font-size: 28px;
