@@ -52,7 +52,7 @@ header {
   text-align: justify;
   padding: 0 50px;
   color: rgb(34, 34, 34);
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .elemen-foto {
@@ -175,6 +175,14 @@ footer {
   text-decoration: underline;
 }
 @media (max-width: 767px) {
+  .logo-left img,
+  .logo-right img {
+    width: 40px;
+  }
+
+  .title {
+    font-size: 10px;
+  }
   .container {
     margin-top: 20%;
   }
@@ -195,6 +203,24 @@ footer {
     margin-top: 80px;
     text-align: center;
     padding: 10px;
+  }
+  .elemen-foto h2 {
+    font-size: 23px;
+  }
+  .elemen-foto p {
+    font-size: 16px;
+  }
+  .input-container {
+    width: 80%;
+
+    margin: 0 auto 20px;
+  }
+  .input-container input {
+    font-size: 15px;
+  }
+  .input-container button {
+    padding: 9px 10px;
+    font-size: 15px;
   }
   footer {
     bottom: 0;
@@ -249,18 +275,22 @@ footer {
     padding: 10px;
   }
   .elemen-foto h2 {
-    font-size: 25px;
+    font-size: 20px;
   }
   .elemen-foto p {
     font-size: 15px;
   }
   .input-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    max-width: 400px;
+    width: 80%;
+
     margin: 0 auto 20px;
+  }
+  .input-container input {
+    font-size: 14px;
+  }
+  .input-container button {
+    padding: 9px 10px;
+    font-size: 14px;
   }
   .iframe-container {
     margin: 0 auto;
