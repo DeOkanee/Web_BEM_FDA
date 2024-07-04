@@ -6,10 +6,7 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #ffffff;
-    /* Tambahkan background image */
-    background-image: url('../img/bg\ bem.jpg');
-    background-size: cover; /* Untuk menutupi seluruh area */
-    background-position: center; /* Posisi gambar di tengah */
+   
   }
   
   header {
