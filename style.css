@@ -396,16 +396,50 @@ footer {
     width: 85%;
     height: auto;
   }
-  #welcome-message{
+
+
+
+  #welcome-message {
     text-align: center;
     margin-bottom: 20%;
-  
   }
   #welcome-message h1{
     color: rgb(27, 27, 27);
     font-size: 13px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
+  #greeting {
+    font-size: 2rem;
+    color: #333; /* Warna teks */
+    font-family: Arial, sans-serif; /* Jenis font */
+    overflow: hidden; /* Mengatur overflow agar animasi teks dapat bekerja */
+    border-right: .15em solid orange; /* Animasi cursor seperti mengetik */
+    white-space: nowrap; /* Agar teks tidak berjalan ke bawah */
+    margin: 0 auto; /* Memusatkan teks */
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+  }
+  
+  /* Animasi untuk efek mengetik */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: orange;
+    }
+  }
+  
+
   .proker{
     width: 88%;
   }
