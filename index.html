@@ -1,135 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BEM FDA OFFICIAL 2024</title>
-    <link rel="stylesheet" href="css/login.css" />
-    <link rel="icon" href="img logo/ICON BEM FDA.png" type="image/x-icon" />
-    <link rel="preload" href="https://i.ibb.co.com/ZfKtzhf/bg-fix-bem.jpg" as="image">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BEM FDA OFFICIAL 2024</title>
+  <link rel="stylesheet" href="css/login.css" />
+  <link rel="icon" href="img logo/ICON BEM FDA.png" type="image/x-icon" />
+  <link rel="preload" href="https://i.ibb.co.com/ZfKtzhf/bg-fix-bem.jpg" as="image">
 
-    <!-- Sweet Alert CSS -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-  </head>
-  <body>
-    <header>
-        <div
-          class="logo-left"
-          onclick="window.open('https://uhnsugriwa.ac.id/');"
-          style="cursor: pointer"
-        >
-          <img src="img logo/LOGO UHN.png" alt="Logo Left" />
-        </div>
-        <div class="title">
-          <h1>BEM FDA OFFICIAL 
-            <img src="img/centangbiru.png" alt="Centang Biru" class="centang-biru">
-          </h1>
-        </div>
-        <div
-          class="logo-right"
-          onclick="window.open('https://www.instagram.com/orkemas_fda/');"
-          style="cursor: pointer"
-        >
-          <img src="img logo/LOGO ORKEMAS.png" alt="Logo Right" />
-        </div>
-      </header>
-
-    <div class="container">
-      <!-- Konten form tetap sama, tambahkan id="loginForm" pada form -->
-      <div class="img-wrapper">
-        <img src="/img logo/ICON BEM FDA.png" alt="BEM FDA" />
-      </div>
-      <div class="heading">Sign In</div>
-      <span>Masuk ke laman Web BEM FDA</span>
-      <form
-        id="loginForm"  id="loginForm"
-        class="form"
-        action="https://script.google.com/macros/s/AKfycbwUNBL_Stce7WjiLOrQGqVACuWpBegDl0_fGdkymVIbmlzvHaRwMH1fazpmxUofeg4LBA/exec"
-        method="post"
-        enctype="multipart/form-data"
-      >
-        <input
-          placeholder="Username"
-          id="username"
-          name="Username"
-          type="text"
-          class="input"
-         
-        />
-        <input
-          placeholder="E-mail"
-          id="email"
-          name="Email"
-          type="email"
-          class="input"
-     
-        />
-        <input value="Sign In" type="submit" class="login-button" />
-      </form>
+  <!-- Sweet Alert CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo-left" onclick="window.open('https://uhnsugriwa.ac.id/');" style="cursor: pointer">
+      <img src="img logo/LOGO UHN.png" alt="Logo Left" />
     </div>
+    <div class="title">
+      <h1>BEM FDA OFFICIAL 
+        <img src="img/centangbiru.png" alt="Centang Biru" class="centang-biru">
+      </h1>
+    </div>
+    <div class="logo-right" onclick="window.open('https://www.instagram.com/orkemas_fda/');" style="cursor: pointer">
+      <img src="img logo/LOGO ORKEMAS.png" alt="Logo Right" />
+    </div>
+  </header>
 
-    <!-- Sweet Alert JavaScript -->
-    
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        document.getElementById('loginForm').addEventListener('submit', function (event) {
-          event.preventDefault(); // Prevent the form from submitting
+  <div class="container">
+    <div class="img-wrapper">
+      <img src="/img logo/ICON BEM FDA.png" alt="BEM FDA" />
+    </div>
+    <div class="heading">Sign In</div>
+    <span>Masuk ke laman Web BEM FDA</span>
+    <form id="loginForm" class="form" action="https://script.google.com/macros/s/AKfycbwUNBL_Stce7WjiLOrQGqVACuWpBegDl0_fGdkymVIbmlzvHaRwMH1fazpmxUofeg4LBA/exec" method="post" enctype="multipart/form-data">
+      <input placeholder="Username" id="username" name="Username" type="text" class="input" />
+      <input placeholder="E-mail" id="email" name="Email" type="email" class="input" />
+      <input value="Sign In" type="submit" class="login-button" />
+    </form>
+  </div>
 
-          // Validasi input sebelum mengirimkan data
-          const username = document.getElementById('username').value.trim();
-          const email = document.getElementById('email').value.trim();
+  <!-- Sweet Alert JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('loginForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the form from submitting
 
-          if (username === '' || email === '') {
-            // Jika ada input yang kosong, tampilkan Sweet Alert
-            Swal.fire({
-              icon: 'error',
-              title: 'Oops...',
-              text: 'Data masih kosong! Mohon lengkapi data.',
-            });
-            return; // Stop further execution
-          }
+        // Validasi input sebelum mengirimkan data
+        const username = document.getElementById('username').value.trim();
+        const email = document.getElementById('email').value.trim();
 
-          // Kirim data menggunakan fetch atau XMLHttpRequest
-          fetch('https://script.google.com/macros/s/AKfycbwUNBL_Stce7WjiLOrQGqVACuWpBegDl0_fGdkymVIbmlzvHaRwMH1fazpmxUofeg4LBA/exec', {
-            method: 'POST',
-            body: new FormData(document.getElementById('loginForm')),
-            enctype: 'multipart/form-data'
-          })
-          .then(response => {
-            if (response.ok) {
-              // Jika sukses, tampilkan Sweet Alert
-              const Toast = Swal.mixin({
-                toast: true,
-                position: 'top-end',
-                showConfirmButton: false,
-                timer: 3000,
-                timerProgressBar: true,
-                didOpen: (toast) => {
-                  toast.addEventListener('mouseenter', Swal.stopTimer);
-                  toast.addEventListener('mouseleave', Swal.resumeTimer);
-                }
-              });
-              Toast.fire({
-                icon: 'success',
-                title: 'Signed in successfully'
-              });
-
-              // Redirect ke halaman "/home.html" setelah 3 detik
-              setTimeout(() => {
-                window.location.href = '/home.html';
-              }, 3000);
-            } else {
-              // Jika ada kesalahan
-              throw new Error('Network response was not ok.');
-            }
-          })
-          .catch(error => {
-            console.error('Error:', error);
-            // Tambahkan kode untuk menampilkan pesan error jika diperlukan
+        if (username === '' || email === '') {
+          // Jika ada input yang kosong, tampilkan Sweet Alert error
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Data masih kosong! Mohon lengkapi data.',
           });
+          return; // Stop further execution
+        }
+
+        // Ubah teks tombol menjadi "Logging In"
+        const loginButton = document.querySelector('.login-button');
+        loginButton.value = 'Logging In...';
+
+        // Kirim data menggunakan fetch atau XMLHttpRequest
+        fetch('https://script.google.com/macros/s/AKfycbwUNBL_Stce7WjiLOrQGqVACuWpBegDl0_fGdkymVIbmlzvHaRwMH1fazpmxUofeg4LBA/exec', {
+          method: 'POST',
+          body: new FormData(document.getElementById('loginForm')),
+          enctype: 'multipart/form-data'
+        })
+        .then(response => {
+          if (response.ok) {
+            // Jika sukses, tampilkan Sweet Alert success
+            const Toast = Swal.mixin({
+              toast: true,
+              position: 'top-end',
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer);
+                toast.addEventListener('mouseleave', Swal.resumeTimer);
+              }
+            });
+            Toast.fire({
+              icon: 'success',
+              title: 'Signed in successfully'
+            });
+
+            // Redirect ke halaman "/home.html" setelah 3 detik
+            setTimeout(() => {
+              window.location.href = '/home.html';
+            }, 3000);
+          } else {
+            // Jika ada kesalahan
+            throw new Error('Network response was not ok.');
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          // Tambahkan kode untuk menampilkan pesan error jika diperlukan
+        })
+        .finally(() => {
+          // Setelah selesai, ubah teks tombol kembali menjadi "Sign In"
+          loginButton.value = 'Sign In';
         });
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
 </html>
