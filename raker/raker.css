@@ -174,7 +174,7 @@ footer {
 .footer-right nav ul li a:hover {
   text-decoration: underline;
 }
-@media (max-width: 800px) {
+@media (max-width: 767px) {
   .container {
     margin-top: 20%;
   }
@@ -189,7 +189,7 @@ footer {
     font-size: 15px;
     text-align: justify;
     padding: 0 15px;
-    color: white;
+    color: rgb(32, 32, 32);
   }
   .elemen-foto {
     margin-top: 80px;
