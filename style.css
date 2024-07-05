@@ -115,11 +115,11 @@ height: auto;
 
 .proker {
   margin: 0 auto;
-  border-radius: 9px;
+
   margin-top: 20px;
   padding: 15px;
   align-items: center;
-  width: 75%;
+  width: 100%;
   background-color: #ffffff;
   text-align: center;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.24);
@@ -313,7 +313,8 @@ footer {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 .proker{
-  width: 85%;
+  width: 89%;
+  border-radius: 9px;
   margin-top: 10%;
 }
   footer {
@@ -442,6 +443,7 @@ footer {
 
   .proker{
     width: 88%;
+    border-radius: 9px;
   }
   .text-proker {
   margin-bottom: -10px;
