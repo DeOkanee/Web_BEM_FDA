@@ -43,10 +43,10 @@ body {
     align-items: center;
   }
   
-  .centang-biru {
+  .icon-bem {
     width: 22px;
   height: auto;
-    margin-left: 5px;
+    margin-right: 5px;
   }
   .container {
     top: 7%;
