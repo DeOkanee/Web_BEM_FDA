@@ -9,33 +9,81 @@
     <link rel="stylesheet" href="css/cp.css" />
     <link rel="stylesheet" href="muncul-form.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-   
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <style>
+      /* CSS untuk posisi ikon check */
+      #login-icon {
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: none;
+    color: #ffffff;
+
+    width: 50px; /* Atur lebar ikon sesuai kebutuhan */
+    height: 50px; /* Atur tinggi ikon sesuai kebutuhan */
+    text-align: center; /* Untuk ikon berbasis teks */
+    line-height: 50px; /* Untuk ikon berbasis teks */
+}
+@media (max-width: 767px) {
+    #login-icon {
+        position: absolute;
+        bottom: 0;
+        right: -5px;
+        transform: none; /* Hilangkan transform agar tidak terpengaruh */
+        z-index: 10;
+        display: none;
+        color: #ffffff;
+       font-size: 10px;
+        width: 30px; /* Ukuran ikon lebih kecil untuk layar kecil */
+        height: 30px; /* Ukuran ikon lebih kecil untuk layar kecil */
+        text-align: center; /* Untuk ikon berbasis teks */
+        line-height: 30px; /* Untuk ikon berbasis teks */
+    }
+}
+@media (max-width: 440px) {
+    #login-icon {
+        position: absolute;
+        bottom: 0;
+        right: -3px;
+        transform: none; /* Hilangkan transform agar tidak terpengaruh */
+        z-index: 10;
+        display: none;
+        color: #ffffff;
+       font-size: 10px;
+        width: 30px; /* Ukuran ikon lebih kecil untuk layar kecil */
+        height: 30px; /* Ukuran ikon lebih kecil untuk layar kecil */
+        text-align: center; /* Untuk ikon berbasis teks */
+        line-height: 30px; /* Untuk ikon berbasis teks */
+    }
+}
+
+
+  </style>
   </head>
   <body>
     
     <header>
-      <div
-        class="logo-left"
-        onclick="window.open('https://uhnsugriwa.ac.id/');"
-        style="cursor: pointer"
-      >
-        <img src="img logo/LOGO UHN.png" alt="Logo Left" />
+      <div class="logo-left" onclick="window.open('https://uhnsugriwa.ac.id/');" style="cursor: pointer">
+          <img src="img logo/LOGO UHN.png" alt="Logo Left" />
       </div>
       <div class="title">
-        <h1>
-          <img src="img logo/ICON BEM FDA.png" alt="BEM FDA" class="icon-bem" />
-          BEM FDA OFFICIAL
-        </h1>
+          <h1>
+              <img src="img logo/ICON BEM FDA.png" alt="BEM FDA" class="icon-bem" />
+              BEM FDA OFFICIAL
+          </h1>
       </div>
-      <div
-        class="logo-right"
-        onclick="window.open('https://www.instagram.com/orkemas_fda/');"
-        style="cursor: pointer"
-      >
-        <img src="img logo/LOGO ORKEMAS.png" alt="Logo Right" />
+      <div id="login-status">
+          <!-- Ikon sukses untuk menunjukkan bahwa pengguna sudah login -->
+          <span id="login-icon"><i class="bi bi-check-circle-fill"></i>「✔」</span>
       </div>
-    </header>
-    
+      <div class="logo-right" onclick="window.open('https://www.instagram.com/orkemas_fda/');" style="cursor: pointer">
+          <img src="img logo/LOGO ORKEMAS.png" alt="Logo Right" />
+      </div>
+  </header>
+
     <div class="organization-header">
       <div class="text-bem">
         <h2>BADAN EKSEKUTIF MAHASISWA</h2>
@@ -285,7 +333,16 @@
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-     
+      <script>
+         document.addEventListener('DOMContentLoaded', function() {
+            // Periksa apakah ada data login yang tersimpan di localStorage
+            const storedData = localStorage.getItem('bemFdaLoginData');
+            if (storedData) {
+                // Jika ada, tampilkan ikon sukses
+                document.getElementById('login-icon').style.display = 'inline'; // Atur tampilan ikon sesuai kebutuhan
+            }
+        });
+    </script>
       <script>
             document.getElementById('show-form').addEventListener('click', function() {
             document.getElementById('form-container').style.display = 'block';
