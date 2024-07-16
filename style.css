@@ -443,11 +443,11 @@ footer {
   }
 
   .organization-header {
-    margin-top: 30%;
+    margin-top: 28%;
   }
   
   .left-side {
-    margin-bottom: 20px;
+    margin-bottom: 27px;
   }
   
   .logo .bem {
@@ -474,14 +474,17 @@ footer {
   }
   
   .right-side img {
-    width: 330px; /* Adjusted width for better alignment */
+    width: 340px; /* Adjusted width for better alignment */
     height: auto;
-    display: block;
-    border-radius: 20px;
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.267);
+   
   }
   
-  
+  @media (max-width: 200px){
+    .right-side img {
+      width: 240px; /* Adjusted width for better alignment */
+      height: auto;
+    }
+  }
   #welcome-message {
     margin-top: 5%;
     text-align: center;
