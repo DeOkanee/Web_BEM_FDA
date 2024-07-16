@@ -78,40 +78,64 @@ header {
   height: auto;
   margin-right: 5px;
 }
+
+/* atas */
+.organization-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 9%;
+
+padding: 0 5%;
+}
+
+.left-side {
+ text-align: center;
+  align-items: center;
+}
+
+.logo .bem {
+  width: 240px; /* Adjusted width for better alignment */
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.432);
+}
+
+.text-bem {
+  text-align: center;
+}
+
 .text-bem h2 {
   margin-bottom: -20px;
   font-size: 28px;
   color: rgb(37, 37, 37);
-  text-align: center;
+ 
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+
 .text-bem p {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 25px;
-  text-align: center;
+  
   color: rgb(37, 37, 37);
 }
-.organization-header {
-  margin-top: 6%; /* Ensure space for fixed header */
-  margin-bottom: 5px;
-}
 
-.organization-header img {
-  width: 60%;
+.right-side img {
+  width: 700px; /* Adjusted width for better alignment */
   height: auto;
   display: block;
-  margin: 0 auto;
-  border-radius: 10px;
+  border-radius: 50px;
   box-shadow: 0 5px 18px rgba(0, 0, 0, 0.267);
 }
 
+
 #welcome-message {
+  margin-top: 3%;
   text-align: center;
   margin-bottom: 10%;
 }
 #welcome-message h1 {
-  color: rgb(27, 27, 27);
+  color: rgb(255, 255, 255);
   font-size: 20px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -291,25 +315,64 @@ footer {
     transform: rotate(5deg);
     left: -15px;
   }
-  .text-bem h2 {
-    margin-bottom: -15px;
-    font-size: 24px;
-  }
   .organization-header {
-    margin-top: 23%; /* Ensure space for fixed header */
-    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18%;
+  
   }
-  .organization-header img {
-    width: 90%;
-    height: auto;
+  
+  .left-side {
+   text-align: center;
+    margin-bottom: 20px;
+ 
   }
-
-  #welcome-message {
+  
+  .logo .bem {
+    width: 220px; /* Adjusted width for better alignment */
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.432);
+  }
+  
+  .text-bem {
     text-align: center;
-    margin-bottom: 20%;
+   
+  }
+  
+  .text-bem h2 {
+    margin-bottom: -20px;
+    font-size: 25px;
+    color: rgb(37, 37, 37);
+   
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+  
+  .text-bem p {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 23px;
+    
+    color: rgb(37, 37, 37);
+  }
+  
+  .right-side img {
+    width: 430px; /* Adjusted width for better alignment */
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.267);
+  }
+  
+  
+  #welcome-message {
+    margin-top: 5%;
+    text-align: center;
+    margin-bottom: 17%;
   }
   #welcome-message h1 {
-    color: rgb(27, 27, 27);
+    color: rgb(255, 255, 255);
     font-size: 16px;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -379,29 +442,53 @@ footer {
     font-size: 11px;
   }
 
-  .text-bem h2 {
-    margin-bottom: -10px;
-    font-size: 20px;
-  }
-  .text-bem p {
-    font-size: 18px;
-  }
   .organization-header {
-    margin-top: 25%; /* Ensure space for fixed header */
-    margin-bottom: 19px;
+    margin-top: 30%;
   }
-
-  .organization-header img {
-    width: 85%;
+  
+  .left-side {
+    margin-bottom: 20px;
+  }
+  
+  .logo .bem {
+    width: 170px; /* Adjusted width for better alignment */
+  }
+  
+  .text-bem {
+    text-align: center;
+  }
+  
+  .text-bem h2 {
+    margin-bottom: -20px;
+    font-size: 21px;
+   
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+  
+  .text-bem p {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    
+    color: rgb(37, 37, 37);
+  }
+  
+  .right-side img {
+    width: 330px; /* Adjusted width for better alignment */
     height: auto;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.267);
   }
-
+  
+  
   #welcome-message {
+    margin-top: 5%;
     text-align: center;
     margin-bottom: 20%;
   }
   #welcome-message h1 {
-    color: rgb(27, 27, 27);
+    color: rgb(255, 255, 255);
     font-size: 13px;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
