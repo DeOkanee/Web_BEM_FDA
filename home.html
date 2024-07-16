@@ -5,64 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BEM FDA OFFICIAL 2024</title>
     <link rel="icon" href="img logo/ICON BEM FDA.png" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/home-style.css" />
     <link rel="stylesheet" href="css/cp.css" />
-    <link rel="stylesheet" href="muncul-form.css" />
+    <link rel="stylesheet" href="css/form-masukkan.css" />
+    <link rel="stylesheet" href="css/info-icon-login.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-    <style>
-      /* CSS untuk posisi ikon check */
-      #login-icon {
-        position: absolute;
-        top: 50%;
-        right: 3%;
-        transform: translate(-50%, -50%);
-        z-index: 10;
-        display: none;
-        color: #ffffff;
-
-        width: 50px; /* Atur lebar ikon sesuai kebutuhan */
-        height: 50px; /* Atur tinggi ikon sesuai kebutuhan */
-        text-align: center; /* Untuk ikon berbasis teks */
-        line-height: 50px; /* Untuk ikon berbasis teks */
-    }
-
-@media (max-width: 767px) {
-    #login-icon {
-        position: absolute;
-        bottom: 0;
-        right: -5px;
-        transform: none; /* Hilangkan transform agar tidak terpengaruh */
-        z-index: 10;
-        display: none;
-        color: #ffffff;
-       font-size: 10px;
-        width: 30px; /* Ukuran ikon lebih kecil untuk layar kecil */
-        height: 30px; /* Ukuran ikon lebih kecil untuk layar kecil */
-        text-align: center; /* Untuk ikon berbasis teks */
-        line-height: 30px; /* Untuk ikon berbasis teks */
-    }
-}
-@media (max-width: 440px) {
-    #login-icon {
-        position: absolute;
-        bottom: 0;
-        right: -3px;
-        transform: none; /* Hilangkan transform agar tidak terpengaruh */
-        z-index: 10;
-        display: none;
-        color: #ffffff;
-       font-size: 10px;
-        width: 30px; /* Ukuran ikon lebih kecil untuk layar kecil */
-        height: 30px; /* Ukuran ikon lebih kecil untuk layar kecil */
-        text-align: center; /* Untuk ikon berbasis teks */
-        line-height: 30px; /* Untuk ikon berbasis teks */
-    }
-}
-
-
-  </style>
   </head>
   <body>
     
@@ -124,7 +73,7 @@
                 </div>
                 <div class="card-footer">
                     <div class="icon" style="display: none;">📷</div>
-                    <a href="/raker/index.html" style="text-decoration: none;">
+                    <a href="ProkerBem24/raker/index.html" style="text-decoration: none;">
                        
                         <div class="icon">📁</div>
                     </a>
@@ -140,7 +89,7 @@
                 </div>
                 <div class="card-footer">
                     <div class="icon" style="display: none;">📷</div>
-                     <a href="ttfda/index.html" style="text-decoration: none;">
+                     <a href="ProkerBem24/ttfda/index.html" style="text-decoration: none;">
                         <div class="icon">📁</div>
                     </a>
                 </div>
@@ -154,7 +103,7 @@
                 </div>
                 <div class="card-footer">
                     <div class="icon" style="display: none;">📷</div>
-                     <a href="/dafest/index.html" style="text-decoration: none;">
+                     <a href="ProkerBem24/dafest/index.html" style="text-decoration: none;">
                         <div class="icon">📁</div>
                     </a>
                 </div>
@@ -168,7 +117,7 @@
                 </div>
                 <div class="card-footer">
                 
-                     <a href="/fesding/index.html" style="text-decoration: none;">
+                     <a href="ProkerBem24/fesding/index.html" style="text-decoration: none;">
                         <div class="icon">📁</div>
                     </a>
                     <a href="https://sertif-berdonasi-fesding24.vercel.app/" style="text-decoration: none;">
@@ -238,8 +187,6 @@
     <section class="contact" id="contact-whatsapp">
       
         <div class="contact-area">
-          
-         
           <!-- Kotak Kontak -->
           <div class="contact-box">
             
@@ -347,79 +294,7 @@
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-      <script>
-         document.addEventListener('DOMContentLoaded', function() {
-            // Periksa apakah ada data login yang tersimpan di localStorage
-            const storedData = localStorage.getItem('bemFdaLoginData');
-            if (storedData) {
-                // Jika ada, tampilkan ikon sukses
-                document.getElementById('login-icon').style.display = 'inline'; // Atur tampilan ikon sesuai kebutuhan
-            }
-        });
-    </script>
-      <script>
-            document.getElementById('show-form').addEventListener('click', function() {
-            document.getElementById('form-container').style.display = 'block';
-          });
-
-          document.getElementById('close-btn').addEventListener('click', function() {
-            document.getElementById('form-container').style.display = 'none';
-          });
-
-        // Tampilkan Sweet Alert saat halaman dimuat
-        document.addEventListener('DOMContentLoaded', function() {
-            Swal.fire({
-                icon: 'info',
-                title: 'info',
-                html: 'Yang mau mengambil Sertifikat Berdonasi Fesding Project Bisa klik <a href="https://sertif-berdonasi-fesding24.vercel.app/">Disini</a> atau Bisa klik Sertifikat Berdonasi yang ada di pogram kerja <a class="nav-link click-scroll" href="#fesding-sertif">FESDING PROJECT 2024</a>',
-            });
-        });
-
-          document
-        .getElementById("contact-link-contact-us")
-        .addEventListener("click", function () {
-          var dwiSeptianiLink = document.getElementById("dwi-septiani-link");
-          var suryaDanaLink = document.getElementById("surya-dana-link");
-          var ediSuastawanLink = document.getElementById("edi-suastawan-link");
-
-          dwiSeptianiLink.style.display = "block";
-          suryaDanaLink.style.display = "block";
-          ediSuastawanLink.style.display = "block";
-
-          setTimeout(function () {
-            dwiSeptianiLink.style.display = "none";
-            suryaDanaLink.style.display = "none";
-            ediSuastawanLink.style.display = "none";
-          }, 10000); // 10 detik
-        });
-      //berubah warna saat klk
-      function changeColor(element) {
-        element.style.backgroundColor = "#4CAF50"; // Ubah warna latar menjadi hijau
-        return true; // Kembalikan nilai true untuk menjalankan tindakan bawaan dari tautan
-      }
-
-              // Ambil elemen teks yang akan dianimasikan
-        const greeting = document.getElementById('greeting');
-
-        // Animasi efek mengetik menggunakan setTimeout
-        function typeWriterEffect(text, i) {
-          if (i < text.length) {
-            greeting.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(() => {
-              typeWriterEffect(text, i);
-            }, 100); // Waktu delay antara karakter
-          }
-        }
-
-        // Panggil fungsi untuk memulai efek mengetik
-        document.addEventListener('DOMContentLoaded', function () {
-          const text = greeting.innerHTML;
-          greeting.innerHTML = ''; // Kosongkan teks awal
-          typeWriterEffect(text, 0);
-        });
-
-      </script>
+      <script src="JS/home.js"></script>
       
   </body>
 </html>

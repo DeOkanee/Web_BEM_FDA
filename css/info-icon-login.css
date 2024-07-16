@@ -1,0 +1,48 @@
+ /* CSS untuk posisi ikon check */
+      #login-icon {
+        position: absolute;
+        top: 50%;
+        right: 3%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        display: none;
+        color: #ffffff;
+
+        width: 50px; /* Atur lebar ikon sesuai kebutuhan */
+        height: 50px; /* Atur tinggi ikon sesuai kebutuhan */
+        text-align: center; /* Untuk ikon berbasis teks */
+        line-height: 50px; /* Untuk ikon berbasis teks */
+    }
+
+@media (max-width: 767px) {
+    #login-icon {
+        position: absolute;
+        bottom: 0;
+        right: -5px;
+        transform: none; /* Hilangkan transform agar tidak terpengaruh */
+        z-index: 10;
+        display: none;
+        color: #ffffff;
+       font-size: 10px;
+        width: 30px; /* Ukuran ikon lebih kecil untuk layar kecil */
+        height: 30px; /* Ukuran ikon lebih kecil untuk layar kecil */
+        text-align: center; /* Untuk ikon berbasis teks */
+        line-height: 30px; /* Untuk ikon berbasis teks */
+    }
+}
+@media (max-width: 440px) {
+    #login-icon {
+        position: absolute;
+        bottom: 0;
+        right: -3px;
+        transform: none; /* Hilangkan transform agar tidak terpengaruh */
+        z-index: 10;
+        display: none;
+        color: #ffffff;
+       font-size: 10px;
+        width: 30px; /* Ukuran ikon lebih kecil untuk layar kecil */
+        height: 30px; /* Ukuran ikon lebih kecil untuk layar kecil */
+        text-align: center; /* Untuk ikon berbasis teks */
+        line-height: 30px; /* Untuk ikon berbasis teks */
+    }
+}
