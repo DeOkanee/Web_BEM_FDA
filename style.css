@@ -320,7 +320,7 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin-top: 18%;
+    margin-top: 23%;
   
   }
   
@@ -358,7 +358,7 @@ footer {
   }
   
   .right-side img {
-    width: 430px; /* Adjusted width for better alignment */
+    width: 400px; /* Adjusted width for better alignment */
     height: auto;
     display: block;
     border-radius: 20px;
