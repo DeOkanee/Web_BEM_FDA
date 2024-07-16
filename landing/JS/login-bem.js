@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (storedData) {
       const data = JSON.parse(storedData);
       // Automatically log in and redirect to home page
-      window.location.href = "/home.html";
+      window.location.href = "/landing/home.html";
     }
 
     document.getElementById("loginForm").addEventListener("submit", function (event) {
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: "Data masih kosong! Mohon lengkapi data.",
+          text: "SigIn gagal! Mohon lengkapi data.",
         });
         return; // Stop further execution
       }
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Redirect ke halaman "/home.html" setelah 3 detik
             setTimeout(() => {
-              window.location.href = "/home.html";
+              window.location.href = "/landing/home.html";
             }, 3000);
           } else {
             // Jika ada kesalahan

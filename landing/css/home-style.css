@@ -134,12 +134,15 @@ padding: 0 5%;
   text-align: center;
   margin-bottom: 10%;
 }
+
 #welcome-message h1 {
   color: rgb(255, 255, 255);
   font-size: 20px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  transition: color 0.3s ease; /* Smooth transition for color change */
 }
+
 
 .proker {
   margin: 0 auto;
