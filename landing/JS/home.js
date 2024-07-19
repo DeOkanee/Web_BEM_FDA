@@ -7,13 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-    document.getElementById('show-form').addEventListener('click', function() {
-    document.getElementById('form-container').style.display = 'block';
-  });
-
-  document.getElementById('close-btn').addEventListener('click', function() {
-    document.getElementById('form-container').style.display = 'none';
-  });
+  
 
 // Tampilkan Sweet Alert saat halaman dimuat
 document.addEventListener('DOMContentLoaded', function() {

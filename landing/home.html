@@ -269,18 +269,17 @@
       <div class="form-container" id="form-container">
         <span class="close-btn" id="close-btn">&times;</span>
         <h2>Masukkan</h2>
-        <form id="myForm" action="https://script.google.com/macros/s/AKfycbwr2BNCuEUJnHQ94o04a2EuO807queSlzC_A9dKUxmFaqNg86UEVmgGttW38aCTvPJB/exec" method="post">
-        
+        <form id="myForm" class="container m-4 pl-4" enctype="multipart/form-data" action="https://script.google.com/macros/s/AKfycbyflu7jDAlqC7fRH10RxrF9i1JPOBWolXVIk6AYpp9RcrOpYMX4H-p8Iv0yOZcPf6mYIg/exec" method="post">
           <label for="nama">Nama:</label>
-          <input type="text" id="nama" name="nama" required />
-        
-          <label for="semester">Semester:</label>
-          <input type="number" id="semester" name="semester" required />
-        
-          <label for="masukkan">Masukkan Anda:</label>
-          <textarea id="masukkan" name="masukkan" rows="4" required></textarea>
+          <input class="input" type="text" id="nama" name="nama" />
           
-          <button id="submit" class="btn btn-primary" type="submit">Kirim</button>
+          <label for="semester">Semester:</label>
+          <input class="input" type="number" id="semester" name="semester" />
+          
+          <label for="masukkan">Masukkan Anda:</label>
+          <textarea class="textarea" id="masukkan" name="masukkan" rows="4"></textarea>
+          
+          <button id="submit-button" class="btn btn-primary" type="submit">Kirim</button>
         </form>
       </div>
      
@@ -326,12 +325,14 @@
             });
         });
         </script>
+        <script src="JS/masukkan.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
       <script src="JS/home.js"></script>
       <script src="JS/greeting-text.js"></script>
+      
       
   </body>
 </html>

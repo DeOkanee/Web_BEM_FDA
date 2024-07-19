@@ -2,7 +2,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-   
+   margin-bottom: 100px;
 }
 
 /* Styling untuk section visi-misi */
@@ -36,7 +36,7 @@ ul {
 @media (max-width: 767px) {
     .visi-misi-bem {
         padding: 25px;
-       
+        margin-bottom: 50px;
     }
     .visi-misi {
         flex-direction: column;
