@@ -54,9 +54,16 @@
     font-size: 25px;
     cursor: pointer;
   }
-
+  @media (max-width: 767px){
+    .form-container {
+      top: 35%;
+        width: 90%;
+       
+      }
+  }
   @media (max-width: 440px){
     .form-container {
+      top: 35%;
         width: 90%;
        
       }
