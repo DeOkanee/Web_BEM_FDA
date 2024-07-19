@@ -137,6 +137,9 @@
                      <a href="#" style="text-decoration: none;">
                         <div class="icon">📁</div>
                     </a>
+                    <a id="Daftar" href="#" style="text-decoration: none;">
+                      <div class="sertifikat"><p>Pendaftaran Lomba</p></div>
+                  </a>
                 </div>
             </div>
             <div class="card">
@@ -289,7 +292,17 @@
           </div>
         </div>
       </footer>
-
+      <script>
+        document.getElementById('Daftar').addEventListener('click', function(event) {
+            event.preventDefault(); // Mencegah perilaku default link
+            Swal.fire({
+                title: 'Informasi',
+                text: 'Pendaftaran Lomba Pasemaya sedang dalam maintenance. Silakan coba lagi nanti.',
+                icon: 'info',
+                confirmButtonText: 'Oke'
+            });
+        });
+        </script>
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
