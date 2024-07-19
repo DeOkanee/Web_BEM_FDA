@@ -35,6 +35,8 @@
     border-radius: 4px;
     box-sizing: border-box;
     resize: vertical; /* Allow vertical resizing of textarea */
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
   }
   .form-container button {
     background-color: #4caf50;
