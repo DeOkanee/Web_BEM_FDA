@@ -25,6 +25,7 @@
   }
   .form-container textarea,
   .form-container input[type="text"],
+  .form-container input[type="number"],
   .form-container input[type="file"],
   .form-container select {
     width: 100%;
