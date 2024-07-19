@@ -206,6 +206,16 @@ padding: 0 5%;
   padding: 10px;
   color: white; /* Text color for better readability over the background image */
 }
+.zoomable {
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.zoomable:hover {
+  transform: scale(1.1); /* Memperbesar gambar sebesar 10% */
+}
+
 .card-footer {
   display: flex;
   justify-content: space-between;
