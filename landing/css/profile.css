@@ -31,8 +31,9 @@ body {
   }
   
   .title {
-    flex-grow: 1;
-    font-family: "Font1", sans-serif;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
   }
   
@@ -41,6 +42,7 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    font-family: "Font1", sans-serif;
   }
   
   .icon-bem {
@@ -53,6 +55,7 @@ body {
     font-size: 30px;
     cursor: pointer;
   }
+  
   
   .side-menu {
     height: 100%;
@@ -68,7 +71,7 @@ body {
   }
   
   .side-menu a {
-    padding: 10px 10px 10px 42px;
+    padding: 10px 10px 10px 20px;
     text-decoration: none;
     font-size: 20px;
     margin-top: 5px;
@@ -79,6 +82,9 @@ body {
   }
   .side-menu .profile{
     margin-top: 20px;
+  }
+  .side-menu a i{
+    margin-right: 15px;
   }
   .side-menu a:hover {
     color: #a8a8a8;
@@ -133,7 +139,7 @@ body {
     width: 130px;
     height: 130px;
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.301);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.164);
   }
   
   .profile-info {
@@ -149,10 +155,12 @@ body {
   }
   .profile-info h2 {
     margin: 0;
-    font-size: 24px;
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
   
   .profile-info p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 0;
     color: #242424;
     font-size: 18px;
@@ -199,7 +207,7 @@ body {
        .side-menu a{
         margin-top: 5px;
             font-size: 20px;
-            padding: 10px 30px;
+            padding: 10px 20px;
         }
         .side-menu .profile{
             margin-top: 20px;

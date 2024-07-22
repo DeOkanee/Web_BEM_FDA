@@ -63,8 +63,9 @@ header {
 }
 
 .title {
-  flex-grow: 1;
-  font-family: "Font1", sans-serif;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
 }
 
@@ -73,6 +74,7 @@ header {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  font-family: "Font1", sans-serif;
 }
 
 .icon-bem {
@@ -100,18 +102,25 @@ header {
 }
 
 .side-menu a {
-  padding: 10px 10px 10px 42px;
+  padding: 10px 10px 10px 20px;
   text-decoration: none;
   font-size: 20px;
   margin-top: 5px;
   color: #ffffff;
-  display: block;
+  display: flex;
+  align-items: center; /* Menambahkan align-items untuk ikon */
   transition: 0.3s;
   background-color: #333;
 }
-.side-menu .profile{
+
+.side-menu .profile {
   margin-top: 20px;
 }
+
+.side-menu a i {
+  margin-right: 15px; /* Menambahkan jarak antara ikon dan teks */
+}
+
 .side-menu a:hover {
   color: #a8a8a8;
 }
@@ -122,6 +131,7 @@ header {
   right: 25px;
   font-size: 36px;
 }
+
 
 
 /* atas */
@@ -490,7 +500,7 @@ footer {
 .side-menu a{
 margin-top: 5px;
     font-size: 20px;
-    padding: 10px 30px;
+    padding: 10px 20px;
 }
 .side-menu .profile{
     margin-top: 20px;
