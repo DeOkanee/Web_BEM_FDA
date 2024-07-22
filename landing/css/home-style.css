@@ -39,6 +39,7 @@ svg {
   bottom: 15%;
   left: 0;
 }
+
 header {
   background-color: #333;
   color: #fff;
@@ -54,23 +55,24 @@ header {
   z-index: 888;
 }
 
-.logo-left img,
-.logo-right img {
+.logo-left img {
   width: 50px;
   height: auto;
-  margin: 4px 5px;
+  margin: 5px 5px;
+  cursor: pointer;
 }
 
 .title {
   flex-grow: 1;
   font-family: "Font1", sans-serif;
+  text-align: center;
 }
 
 .title h1 {
   font-size: 19px;
-  justify-content: center;
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
 }
 
 .icon-bem {
@@ -78,6 +80,49 @@ header {
   height: auto;
   margin-right: 5px;
 }
+
+.menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.side-menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #020202d7;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 999;
+}
+
+.side-menu a {
+  padding: 10px 10px 10px 42px;
+  text-decoration: none;
+  font-size: 20px;
+  margin-top: 5px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+  background-color: #333;
+}
+.side-menu .profile{
+  margin-top: 20px;
+}
+.side-menu a:hover {
+  color: #a8a8a8;
+}
+
+.side-menu .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 36px;
+}
+
 
 /* atas */
 .organization-header {
@@ -302,12 +347,20 @@ footer {
 }
 
 @media (max-width: 767px) {
-  .logo-left img,
-  .logo-right img {
-    width: 40px; /* Sesuaikan ukuran logo */
+  .logo-left img {
+    width: 40px;
   }
-  .title {
-    font-size: 11px;
+
+  .title h1 {
+    font-size: 17px;
+  }
+
+  .icon-bem {
+    width: 20px;
+  }
+
+  .menu-icon {
+    font-size: 28px;
   }
   svg {
     position: fixed;
@@ -418,6 +471,36 @@ footer {
   }
 }
 @media (max-width: 440px) {
+  .logo-left img {
+    margin: 4px 1px;
+  width: 35px;
+}
+
+.title h1 {
+  font-size: 15px;
+}
+
+.icon-bem {
+  width: 18px;
+}
+
+.menu-icon {
+  font-size: 26px;
+}
+.side-menu a{
+margin-top: 5px;
+    font-size: 20px;
+    padding: 10px 30px;
+}
+.side-menu .profile{
+    margin-top: 20px;
+}
+.side-menu .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 36px;
+  }
   .wave-header {
     min-height: 100vh;
     width: 100%;
@@ -447,14 +530,7 @@ footer {
     transform: rotate(5deg);
     left: -15px;
   }
-  .logo-left img,
-  .logo-right img {
-    width: 40px;
-  }
-
-  .title {
-    font-size: 11px;
-  }
+  
 
   .organization-header {
     margin-top: 28%;

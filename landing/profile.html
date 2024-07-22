@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile - BEM FDA OFFICIAL 2024</title>
+    <link rel="stylesheet" href="css/profile.css" />
+    <link
+      rel="icon"
+      href="/landing/img logo/ICON BEM FDA.png"
+      type="image/x-icon"
+    />
+    <!-- Sweet Alert CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo-left">
+        <img
+          src="/landing/img logo/LOGO UHN.png"
+          alt="Logo UHN"
+          onclick="window.open('https://uhnsugriwa.ac.id/');"
+          style="cursor: pointer"
+        />
+        <img
+          src="/landing/img logo/LOGO ORKEMAS.png"
+          alt="Logo Orkemas"
+          onclick="window.open('https://www.instagram.com/orkemas_fda/');"
+          style="cursor: pointer"
+        />
+      </div>
+      <div class="title">
+        <h1>
+          <img
+            src="/landing/img logo/ICON BEM FDA.png"
+            alt="BEM FDA"
+            class="icon-bem"
+          />
+          BEM FDA OFFICIAL
+        </h1>
+      </div>
+      <div class="menu-icon" onclick="toggleMenu()">
+        &#9776;
+        <!-- Three horizontal bars -->
+      </div>
+    </header>
+
+    <div id="side-menu" class="side-menu">
+      <a
+        href="javascript:void(0)"
+        class="close-btn"
+        style="background: none"
+        onclick="closeMenu()"
+        >&times;</a
+      >
+      <a class="profile" href="home.html">Home</a>
+      <a style="display: none;" class="info" href="#">Info</a>
+    </div>
+
+    <div class="profile-container">
+      <!-- Element terlogin dengan centang hijau -->
+      <div class="login-status">
+        <img
+          src="img/Centang-Hijau.jpeg"
+          alt="Login Successful"
+          class="check-icon"
+        />
+        <p>Login Berhasil</p>
+      </div>
+      <!-- Element terlogin tanpa centang hijau -->
+       <div class="status-profile">
+        <h3>Profil</h3>
+       </div>
+      <div class="profile-photo">
+        <img id="userPhoto" src="img/Profile.jpeg" alt="User Photo" />
+      </div>
+      <div class="profile-info">
+        <h1>Nama</h1>
+        <h2 id="username">Nama Pengguna</h2>
+        <h1>Email</h1>
+        <p id="email">Email Pengguna</p>
+      </div>
+    </div>
+    <script src="JS/header.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const loginData = JSON.parse(localStorage.getItem("bemFdaLoginData"));
+        if (loginData) {
+          document.getElementById("username").innerText = loginData.username;
+          document.getElementById("email").innerText = loginData.email;
+        } else {
+          window.location.href = "/index.html"; // Redirect to login if no data
+        }
+      });
+    </script>
+  </body>
+</html>

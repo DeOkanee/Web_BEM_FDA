@@ -1,22 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Periksa apakah ada data login yang tersimpan di localStorage
-    const storedData = localStorage.getItem('bemFdaLoginData');
-    if (storedData) {
-        // Jika ada, tampilkan ikon sukses
-        document.getElementById('login-icon').style.display = 'inline'; // Atur tampilan ikon sesuai kebutuhan
-    }
-});
 
-  
 
-// Tampilkan Sweet Alert saat halaman dimuat
-document.addEventListener('DOMContentLoaded', function() {
-    Swal.fire({
-        icon: 'info',
-        title: 'info',
-        html: 'Yang mau mengambil Sertifikat Berdonasi Fesding Project Bisa klik <a href="https://sertif-berdonasi-fesding24.vercel.app/">Disini</a> atau Bisa klik Sertifikat Berdonasi yang ada di pogram kerja <a class="nav-link click-scroll" href="#fesding-sertif">FESDING PROJECT 2024</a>',
-    });
-});
 
   document
 .getElementById("contact-link-contact-us")
