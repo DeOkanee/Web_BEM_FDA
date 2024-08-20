@@ -28,7 +28,7 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
 
   // Kirim data menggunakan fetch atau XMLHttpRequest
   fetch(
-    "https://script.google.com/macros/s/AKfycbwUNBL_Stce7WjiLOrQGqVACuWpBegDl0_fGdkymVIbmlzvHaRwMH1fazpmxUofeg4LBA/exec",
+    "https://script.google.com/macros/s/AKfycbxG79zscAJLNoK7C8j3g6YWZGNo_AU1nz0zJnweZWAhKGacizeNXx5QHtMYlUOOPT5k/exec",
     {
       method: "POST",
       body: new FormData(document.getElementById("loginForm")),
