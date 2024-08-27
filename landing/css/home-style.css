@@ -13,31 +13,53 @@ body {
   height: 100vh;
   margin: 0;
 }
-.wave-header {
-  min-height: 100vh;
-  width: 100%;
-  background: #ffffff;
-  position: absolute; /* Mengubah dari relative ke absolute */
-  top: 0;
-  left: 0;
-  z-index: -1; /* Menambahkan z-index yang rendah untuk berada di bawah elemen lain */
+/* From Uiverse.io by MikeAndrewDesigner */ 
+.latar {
+
+  z-index: -1; /* Pastikan e-card di atas wave */
 }
-svg {
+
+.wave {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: -1;
+  width: 150vw;
+  height: 150vh;
+  opacity: 0.4;
+  left: -25vw;
+  top: 25%;
+  background: linear-gradient(744deg, #40e9ff, #381cf3 60%, #00ddeb);
+  z-index: -1; /* Menempatkan wave di belakang semua elemen */
+  animation: wave 15s infinite linear;
 }
-.wave-header .svg2 {
-  position: fixed;
-  bottom: 16%;
-  right: -30%;
+
+/* Wave pertama */
+.wave:nth-child(1) {
+  border-radius: 50% 60% 50% 70%; /* Bentuk tidak simetris */
+  transform: scale(1.1) skew(10deg, 5deg); /* Transformasi tambahan */
+  animation-duration: 30s;
 }
-.wave-header .svg3 {
-  position: fixed;
-  bottom: 15%;
-  left: 0;
+
+/* Wave kedua */
+.wave:nth-child(2) {
+  border-radius: 70% 40% 60% 50%; /* Bentuk berbeda */
+  transform: scale(1.2) skew(-10deg, -5deg); /* Transformasi tambahan */
+  animation-duration: 50s;
+}
+
+/* Wave ketiga */
+.wave:nth-child(3) {
+  border-radius: 50% 70% 40% 60%; /* Bentuk berbeda lagi */
+  transform: scale(1.3) skew(5deg, 10deg); /* Transformasi tambahan */
+  animation-duration: 45s;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 header {
@@ -198,7 +220,7 @@ header {
 
 .proker {
   margin: 0 auto;
-
+margin-bottom: 40px;
   margin-top: 20px;
   padding: 15px;
   align-items: center;
