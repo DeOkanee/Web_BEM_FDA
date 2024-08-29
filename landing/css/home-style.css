@@ -15,8 +15,8 @@ body {
 }
 /* From Uiverse.io by MikeAndrewDesigner */ 
 .latar {
-
-  z-index: -1; /* Pastikan e-card di atas wave */
+  z-index: -1;
+  overflow: hidden; /* Menghindari overflow dari wave */
 }
 
 .wave {
@@ -25,42 +25,45 @@ body {
   height: 150vh;
   opacity: 0.4;
   left: -25vw;
-  top: 25%;
+  top: 0;
   background: linear-gradient(744deg, #40e9ff, #381cf3 60%, #00ddeb);
-  z-index: -1; /* Menempatkan wave di belakang semua elemen */
+  z-index: -1;
   animation: wave 15s infinite linear;
 }
 
 /* Wave pertama */
 .wave:nth-child(1) {
-  border-radius: 50% 60% 50% 70%; /* Bentuk tidak simetris */
-  transform: scale(1.1) skew(10deg, 5deg); /* Transformasi tambahan */
+  border-radius: 50% 50% 50% 50%;
+  transform: scale(1.1) skew(10deg, 5deg) rotate(-15deg);
   animation-duration: 30s;
 }
 
 /* Wave kedua */
 .wave:nth-child(2) {
-  border-radius: 70% 40% 60% 50%; /* Bentuk berbeda */
-  transform: scale(1.2) skew(-10deg, -5deg); /* Transformasi tambahan */
+  border-radius: 50% 50% 50% 50%;
+  transform: scale(1.2) skew(-10deg, -5deg) rotate(15deg);
   animation-duration: 50s;
 }
 
 /* Wave ketiga */
 .wave:nth-child(3) {
-  border-radius: 50% 70% 40% 60%; /* Bentuk berbeda lagi */
-  transform: scale(1.3) skew(5deg, 10deg); /* Transformasi tambahan */
+  border-radius: 50% 50% 50% 50%;
+  transform: scale(1.3) skew(5deg, 10deg) rotate(-30deg);
   animation-duration: 45s;
 }
 
 @keyframes wave {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(0deg) translateY(-10%);
   }
-
+  50% {
+    transform: rotate(180deg) translateY(10%);
+  }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(360deg) translateY(-10%);
   }
 }
+
 
 header {
   background-color: #333;
