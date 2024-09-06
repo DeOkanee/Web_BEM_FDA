@@ -172,7 +172,7 @@
                     </a>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" id="masayu">
                 <div class="card-header blue">
                     PASEMAYA 2024
                 </div>
@@ -201,6 +201,9 @@
                      <a href="#" style="text-decoration: none;">
                         <div class="icon">📁</div>
                     </a>
+                    <a href="https://masayu-bem-fda-2024.vercel.app/" style="text-decoration: none;">
+                      <div class="sertifikat"><p>Penugasan Masayu 2024</p></div>
+                  </a>
                 </div>
             </div>
             <div class="card">
@@ -349,15 +352,27 @@
           <h2>Info</h2>
           <ul id="info-list">
             <!-- Daftar informasi dengan tautan -->
+             <li><b>Penugasan Masayu Fakultas Dharma Acarya 2024 <br> Bisa Di Akses <a href="https://masayu-bem-fda-2024.vercel.app/">Disini</a></b> Atau Bisa Klik <a class="nav-link click-scroll" href="#masayu">Penugasan Masayu</a></li>
             <li><b>Pendaftaran Lomba Pasemaya 2024 </b><br> SUDAH TUTUP</li>
             <li>Yang mau mengambil Sertifikat Berdonasi Fesding Project Bisa klik <a href="https://sertif-berdonasi-fesding24.vercel.app/">Disini</a> atau Bisa klik Sertifikat Berdonasi yang ada di pogram kerja <a class="nav-link click-scroll" href="#fesding-sertif">FESDING PROJECT 2024</a></li>
-           
+            https://masayu-bem-fda-2024.vercel.app/
             <li><a href="#" target="_blank">-</a></li>
           </ul>
         </div>
       </div>
 
+        <script>
+          function closeInfo() {
+          document.getElementById('info-overlay').style.display = 'none';
+        }
 
+        document.querySelectorAll('.click-scroll').forEach(link => {
+          link.addEventListener('click', () => {
+            closeInfo();
+          });
+        });
+
+        </script>
 
 
    
