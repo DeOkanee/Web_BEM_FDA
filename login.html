@@ -24,6 +24,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
     />
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
   </head>
   <body>
     <header>
@@ -78,11 +79,50 @@
         />
         <input value="Sign In" type="submit" class="login-button" />
       </form>
+       <!-- Google Sign-In button -->
+       <div id="g_id_onload"
+       data-client_id="80404668042-n7e2v4a5qqbc46i30u23ndl5l5diu7cq.apps.googleusercontent.com"
+       data-context="signin"
+       data-ux_mode="popup"
+       data-callback="handleCredentialResponse"
+       data-auto_prompt="false">
+   </div>
+   <div class="g_id_signin"
+       data-type="standard"
+       data-shape="rectangular"
+       data-theme="outline"
+       data-text="sign_in_with"
+       data-size="large">
+   </div>
     </div>
 
     <!-- Sweet Alert JavaScript -->
   <!-- login.html -->
 
 <script src="/landing/JS/login-bem.js"></script>
+<script>
+  function handleCredentialResponse(response) {
+      // Decode JWT to get user's information
+      const decodedResponse = parseJwt(response.credential);
+      const email = decodedResponse.email;
+      const name = decodedResponse.name;
+
+      // Store user data in localStorage
+      localStorage.setItem('bemFdaLoginData', JSON.stringify({ email, name }));
+
+      // Redirect to home.html
+      window.location.href = '/landing/home.html';
+  }
+
+  // Function to decode JWT token
+  function parseJwt(token) {
+      let base64Url = token.split('.')[1];
+      let base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+      let jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+          return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+      }).join(''));
+      return JSON.parse(jsonPayload);
+  }
+</script>
   </body>
 </html>
