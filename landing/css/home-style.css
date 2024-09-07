@@ -376,7 +376,35 @@ footer {
 .footer-right nav ul li a:hover {
   text-decoration: underline;
 }
-
+@media (max-width: 1000px){
+  .organization-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 23%;
+  }
+  footer {
+    bottom: 0;
+    padding: 15px 0; /* Ubah padding agar lebih ramping */
+  }
+  .bawah {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .footer-right nav ul {
+    justify-content: center;
+  }
+  .footer-right nav ul li {
+    margin: 0 10px;
+  }
+}
 @media (max-width: 767px) {
   .logo-left img {
     width: 40px;
