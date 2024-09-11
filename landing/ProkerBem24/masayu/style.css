@@ -1,0 +1,348 @@
+body {
+  margin: 0;
+  background-color: #ffffff;
+}
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 888;
+}
+
+.logo-left img,
+.logo-right img {
+  width: 50px;
+  height: auto;
+  margin: 4px 5px;
+}
+
+.title {
+  font-size: 12px;
+  text-align: center;
+  flex-grow: 1;
+  font-family: "Font1", sans-serif;
+}
+
+.container {
+  margin-top: 8%;
+}
+
+.dokum-utama {
+  margin-top: 6%; /* Ensure space for fixed header */
+}
+
+.dokum-utama img {
+  width: 60%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.288);
+}
+.dokum-kegiatan{
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+.dokum-kegiatan img{
+  width: 45%;
+  height: auto;
+ 
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.288);
+}
+.text-caption p {
+  font-size: 20px;
+  text-align: justify;
+  padding: 0 50px;
+  color: rgb(34, 34, 34);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.elemen-foto {
+  margin-top: 6%;
+  text-align: center;
+  background: #bdbdbd;
+  padding: 30px;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.elemen-foto h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: #000000;
+}
+.elemen-foto p {
+  font-size: 18px;
+}
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 20px;
+}
+.input-container input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 8px 0 0 8px;
+  font-size: 16px;
+  border-right: none;
+}
+.input-container input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+.input-container button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  background-color: #007bff;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.input-container button:hover {
+  background-color: #0056b3;
+}
+.error {
+  color: red;
+  margin-top: 10px;
+}
+.iframe-container {
+  margin: 0 auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.226);
+  background-color: #ffffff;
+  justify-content: center;
+  margin-top: 30px;
+  display: none;
+  width: 100%;
+  height: 80vh;
+  padding: 10px 0 10px 0;
+}
+iframe {
+  
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+
+footer {
+  background-color: #525252;
+  color: #fff;
+  padding: 20px 0;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.bawah {
+  width: 100%;
+  max-width: 1200px; /* Optional: jika Anda ingin batasi lebar maksimum */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left p {
+  margin: 0;
+}
+.footer-left p a {
+  text-decoration: none;
+  color: rgb(59, 193, 255);
+}
+.footer-left p a:hover {
+  color: white;
+}
+.footer-right nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.footer-right nav ul li {
+  margin-right: 20px;
+}
+
+.footer-right nav ul li:last-child {
+  margin-right: 0;
+}
+
+.footer-right nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-right nav ul li a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 767px) {
+  .logo-left img,
+  .logo-right img {
+    width: 40px;
+  }
+
+  .title {
+    font-size: 10px;
+  }
+  .container {
+    margin-top: 20%;
+  }
+  .dokum-utama {
+    margin-top: 6%; /* Ensure space for fixed header */
+  }
+  .dokum-utama img {
+    width: 90%;
+    height: auto;
+  }
+  .dokum-kegiatan{
+    flex-direction: column;
+  }
+  .dokum-kegiatan img{
+    width: 100%;
+  }
+  .text-caption p {
+    font-size: 15px;
+    text-align: justify;
+    padding: 0 20px;
+    color: rgb(32, 32, 32);
+  }
+  .elemen-foto {
+    margin-top: 80px;
+    text-align: center;
+    padding: 10px;
+  }
+  .elemen-foto h2 {
+    font-size: 23px;
+  }
+  .elemen-foto p {
+    font-size: 16px;
+  }
+  .input-container {
+    width: 80%;
+
+    margin: 0 auto 20px;
+  }
+  .input-container input {
+    font-size: 15px;
+  }
+  .input-container button {
+    padding: 9px 10px;
+    font-size: 15px;
+  }
+  footer {
+    bottom: 0;
+    padding: 10px 0; /* Ubah padding agar lebih ramping */
+  }
+  .bawah {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .footer-right nav ul {
+    justify-content: center;
+  }
+  .footer-right nav ul li {
+    margin: 0 10px;
+  }
+}
+@media (max-width: 440px) {
+  .logo-left img,
+  .logo-right img {
+    width: 40px;
+  }
+
+  .title {
+    font-size: 10px;
+  }
+  .container {
+    margin-top: 20%;
+  }
+
+  .dokum {
+    margin-top: 6%; /* Ensure space for fixed header */
+  }
+  .dokum img {
+    width: 90%;
+    height: auto;
+  }
+  .text-caption p {
+    font-size: 15px;
+    text-align: justify;
+    padding: 0 20px;
+    color: rgb(32, 32, 32);
+  }
+  .elemen-foto {
+    margin-top: 60px;
+    text-align: center;
+    padding: 10px;
+  }
+  .elemen-foto h2 {
+    font-size: 20px;
+  }
+  .elemen-foto p {
+    font-size: 15px;
+  }
+  .input-container {
+    width: 80%;
+
+    margin: 0 auto 20px;
+  }
+  .input-container input {
+    font-size: 14px;
+  }
+  .input-container button {
+    padding: 9px 10px;
+    font-size: 14px;
+  }
+  .iframe-container {
+    margin: 0 auto;
+    width: 100%;
+    height: 80vh;
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  footer {
+    padding: 10px 0; /* Ubah padding agar lebih ramping */
+  }
+  .bawah {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .footer-right nav ul {
+    justify-content: center;
+    text-align: center;
+  }
+  .footer-right nav ul li {
+    margin: 0 10px;
+  }
+}

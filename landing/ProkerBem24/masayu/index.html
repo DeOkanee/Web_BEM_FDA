@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BEM FDA OFFICIAL 2024</title>
+    <link
+      rel="icon"
+      href="https://res.cloudinary.com/dr8dzahhw/image/upload/v1724736453/qxa0eckzsqmvqvs2ycsa.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div
+        class="logo-left"
+        onclick="window.open('https://uhnsugriwa.ac.id/');"
+        style="cursor: pointer"
+      >
+        <img
+          src="https://res.cloudinary.com/dr8dzahhw/image/upload/v1724736625/rclimerx96mykamipbrg.png"
+          alt="Logo Left"
+        />
+      </div>
+      <div class="title">
+        <h1>MASAYU 2024</h1>
+      </div>
+      <div
+        class="logo-right"
+        onclick="window.open('https://www.instagram.com/orkemas_fda/');"
+        style="cursor: pointer"
+      >
+        <img
+          src="https://res.cloudinary.com/dr8dzahhw/image/upload/v1724736600/hfk5zbffcfgh5p0dcwqa.png"
+          alt="Logo Right"
+        />
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="dokum-utama">
+        <img
+          src="https://res.cloudinary.com/dwpnsfghy/image/upload/v1726052773/a5uj6ph2skfe7lxgf9hw.jpg"
+          alt="MASAYU24"
+        />
+      </div>
+      <div class="text-caption">
+        <p>
+          &nbsp;&nbsp;&nbsp; Halo seluruh civitas akademika Fakultas Dharma
+          Acarya, Universitas Hindu Negeri I Gusti Bagus Sugriwa Denpasar!
+          <br /><br />
+          Dengan penuh semangat, kegiatan Mahasisya Upanayana Fakultas Dharma
+          Acarya tahun 2024 telah terlaksana dengan sukses pada hari Senin, 9
+          September 2024, di UHN I Gusti Bagus Sugriwa Denpasar, Kampus Bangli.
+          <br/><br/>Acara yang berlangsung secara luring ini menjadi awal yang penting
+          bagi mahasiswa baru untuk mengenal lebih dalam dunia akademik di
+          Fakultas Dharma Acarya. Melalui MASAYU 2024, kami berharap mahasiswa
+          baru dapat mempersiapkan diri sebaik mungkin dalam menghadapi
+          tantangan perkuliahan ke depannya. <br/> Tetap semangat, terus berproses,
+          dan sampai jumpa di kegiatan-kegiatan berikutnya yang tak kalah
+          inspiratif!
+        </p>
+      </div>
+      <div class="dokum-kegiatan">
+        <img
+          src="https://res.cloudinary.com/dwpnsfghy/image/upload/v1726053188/pa0plzk4uujwksn3a0r2.jpg"
+          alt="MASAYU24"
+        />
+        <br />
+        <img
+          src="https://res.cloudinary.com/dwpnsfghy/image/upload/v1726053283/acbrntqargmv4kijwg6v.jpg"
+          alt="MASAYU24"
+        />
+      </div>
+    </div>
+    <div class="elemen-foto">
+      <h2>Foto Dokumentasi</h2>
+      <p>
+        Masukkan Password untuk melihat foto dokumentasinya <br />Kenapa
+        berpasword karena menyangkut privasi seseorang.
+      </p>
+      <div class="input-container">
+        <input type="text" id="password" placeholder="Masukkan Password" />
+        <button onclick="checkPassword()">Submit</button>
+      </div>
+      <div id="message" class="error"></div>
+      <div id="link" class="link iframe-container">
+        <iframe
+          src="https://drive.google.com/embeddedfolderview?id=10BWjncY8Ez-qBd9s8WM04AJ_fTZScNCB#grid"
+        ></iframe>
+      </div>
+    </div>
+    <footer>
+      <div class="bawah">
+        <div class="footer-left">
+          <p>
+            <a href="#" style="cursor: block">&copy; Bem fda 2024</a>
+          </p>
+        </div>
+        <div class="footer-right">
+          <nav>
+            <ul>
+              <li>
+                <a href="/landing/home.html">Home</a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/bemfda?igsh=MWQ3Z2RuN2diZHYycg=="
+                  >Instagram Kami</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function checkPassword() {
+        const password = document.getElementById("password").value;
+        const message = document.getElementById("message");
+        const link = document.getElementById("link");
+
+        if (password === "masayusukses") {
+          message.textContent = "";
+          link.style.display = "block";
+        } else {
+          message.textContent = "Password salah, coba lagi.";
+          link.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
