@@ -14,10 +14,20 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
 
   if (username === "" || email === "") {
     // Jika ada input yang kosong, tampilkan Sweet Alert error
-    Swal.fire({
+    const Toast = Swal.mixin({
+      toast: true,
+      position: "top-end",
+      showConfirmButton: false,
+      timer: 2000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.onmouseenter = Swal.stopTimer;
+        toast.onmouseleave = Swal.resumeTimer;
+      }
+    });
+    Toast.fire({
       icon: "error",
-      title: "Oops...",
-      text: "SigIn gagal! Mohon lengkapi data.",
+      title: "Tolong masukkan Username & E-mail"
     });
     return; // Stop further execution
   }
