@@ -24,7 +24,7 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
 
   // Ubah teks tombol menjadi "Logging In"
   const loginButton = document.querySelector(".login-button");
-  loginButton.value = "Logging In...";
+  loginButton.value = "Memproses...";
 
   // Kirim data menggunakan fetch atau XMLHttpRequest
   fetch(
