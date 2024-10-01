@@ -1,0 +1,257 @@
+/* Comment Section Styles */
+.comment-section {
+    background-color: #ffffffb4;
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    margin: 0 auto;
+}
+
+.comment-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: rgb(29, 29, 29);
+    text-align: center;
+    padding-bottom: 10px;
+    width: 50%;
+    margin: 0 auto 25px auto;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.comment-form input[type="text"],
+.comment-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #181818;
+    background-color: #fafafa;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.comment-form textarea {
+    font-size: 1.1em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.comment-form input[type="text"]::placeholder,
+.comment-form textarea::placeholder {
+    color: #888888;
+}
+
+.comment-form input[type="text"]:focus,
+.comment-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    background-color: #fff;
+}
+
+.comment-form button {
+    padding: 10px 17px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 0.8em;
+    cursor: pointer;
+    width: 20%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.comment-form button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#commentList {
+    margin-top: 20px;
+}
+
+.comment-box {
+ background-color: #f0f0f08a;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.171);
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #ff7b00;
+    font-size: 1.1em;
+    margin: 0;
+  
+   
+}
+
+.comment-text {
+    color: #181818;
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+.membalas{
+    color: #a1a1a1;
+    margin-top: 0;
+    
+
+}
+.comment-timestamp {
+    font-size: 0.85em;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.comment-reply-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgb(0, 162, 255);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9em;
+}
+
+.comment-reply-btn:hover {
+    background-color: #07a07f;
+}
+
+.reply-form {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 6px;
+    width: 100%; /* Pastikan form juga menyesuaikan lebarnya */
+    box-sizing: border-box; /* Supaya padding dihitung dalam lebar elemen */
+}
+
+.reply-input {
+    width: 100%; /* Menyesuaikan dengan lebar kontainer */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 0.8em;
+    box-sizing: border-box; /* Agar padding tidak menambah ukuran total */
+}
+
+
+.reply-submit-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8em;
+
+}
+
+.reply-submit-btn:hover {
+    background-color: #218838;
+}
+
+.replies-container {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 1000px) {
+    .comment-section {
+        padding: 15px;
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .comment-section h2 {
+        font-size: 1.3em;
+    }
+
+    .comment-form button {
+        width: 30%;
+    }
+
+    .comment-form {
+        max-width: 95%;
+    }
+    .reply-input {
+        width: 80%; /* Lebar lebih kecil untuk layar menengah */
+        font-size: 0.9em; /* Font lebih kecil sedikit */
+    }
+}
+
+@media (max-width: 440px) {
+    .comment-section {
+        padding: 15px;
+        width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    }
+
+    .comment-section h2 {
+        width: 90%;
+        font-size: 1.2em;
+        margin-bottom: 15px;
+    }
+
+    .comment-form input[type="text"],
+    .comment-form textarea {
+        padding: 10px;
+    }
+
+    .comment-form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; /* Memastikan tombol berada di sebelah kanan */
+    }
+    
+    .comment-form button {
+        width: 30%;
+        font-size: 15px;
+        margin-left: auto; /* Menempatkan tombol ke sebelah kanan */
+    }
+    
+    
+
+    .comment-box {
+        padding: 10px;
+    }
+
+    .comment-username {
+        font-size: 1em;
+    }
+
+    .reply-input {
+        width: 100%; /* Lebar penuh untuk layar kecil */
+        font-size: 0.8em; /* Font lebih kecil untuk layar kecil */
+    }
+
+    .replies-container {
+        padding-left: 10px;
+    }
+}
+
+.delete-btn {
+    float: right;
+    color: red;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.delete-btn:hover {
+    color: darkred;
+}
