@@ -189,7 +189,7 @@
         max-width: 95%;
     }
     .reply-input {
-        width: 80%; /* Lebar lebih kecil untuk layar menengah */
+        width: 100%; /* Lebar lebih kecil untuk layar menengah */
         font-size: 0.9em; /* Font lebih kecil sedikit */
     }
 }
