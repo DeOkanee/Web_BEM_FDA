@@ -16,6 +16,9 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
+// Variable to store the current user's username
+let currentUsername = '';
+
 // Helper function to encode ID for selectors
 function encodeId(id) {
     return id.replace(/[/]/g, '_');
@@ -23,18 +26,27 @@ function encodeId(id) {
 
 // Function to add comment to Firebase
 export function addComment() {
-    const username = document.getElementById('username').value;
+    const usernameInput = document.getElementById('username');
     const commentText = document.getElementById('commentText').value;
 
-    if (username === '' || commentText === '') {
-        alert('Harap isi nama dan komentar!');
+    if (currentUsername === '' && usernameInput.value === '') {
+        alert('Harap isi nama!');
         return;
+    }
+
+    if (commentText === '') {
+        alert('Harap isi komentar!');
+        return;
+    }
+
+    if (currentUsername === '') {
+        currentUsername = usernameInput.value;
     }
 
     const commentRef = push(ref(database, 'comments'));
 
     set(commentRef, {
-        username: username,
+        username: currentUsername,
         text: commentText,
         timestamp: new Date().toISOString(),
         replies: {}
@@ -44,11 +56,13 @@ export function addComment() {
         console.error("Error writing new comment to Firebase Database", error);
     });
 
-    document.getElementById('username').value = '';
     document.getElementById('commentText').value = '';
+    if (usernameInput) {
+        usernameInput.style.display = 'none';
+    }
 }
 
-// Function to create comment element with delete button
+// Function to create comment element with conditional delete button
 function createCommentElement(comment, commentId, level = 0, replyToName = null) {
     let commentDiv = document.createElement('div');
     commentDiv.classList.add('comment');
@@ -61,9 +75,14 @@ function createCommentElement(comment, commentId, level = 0, replyToName = null)
         replyToHTML = `<p class="membalas"><small>Membalas ke: ${replyToName}</small></p>`;
     }
 
+    let deleteButtonHTML = '';
+    if (comment.username === currentUsername) {
+        deleteButtonHTML = `<span class="delete-btn" onclick="deleteComment('${commentId}')">❌</span>`;
+    }
+
     commentDiv.innerHTML = `
     <div class="comment-box">
-        <span class="delete-btn" onclick="deleteComment('${commentId}')">❌</span>
+        ${deleteButtonHTML}
         <h4 class="comment-username">${comment.username}</h4>
         ${replyToHTML}
         <p class="comment-text">${comment.text}</p>
@@ -71,7 +90,7 @@ function createCommentElement(comment, commentId, level = 0, replyToName = null)
         <button class="comment-reply-btn" onclick="showReplyForm('${encodedId}', '${comment.username}')">Balas</button>
     
         <div id="replyForm-${encodedId}" class="reply-form" style="display: none;">
-            <input type="text" id="replyUsername-${encodedId}" class="reply-input" placeholder="Nama Anda" required autocomplete="off">
+            ${currentUsername ? '' : `<input type="text" id="replyUsername-${encodedId}" class="reply-input" placeholder="Nama Anda" required autocomplete="off">`}
             <input type="text" id="replyText-${encodedId}" class="reply-input" placeholder="Tulis balasan..." required autocomplete="off">
             <button class="reply-submit-btn" onclick="addReply('${commentId}', '${comment.username}')">Kirim Balasan</button>
         </div>
@@ -112,6 +131,12 @@ export function displayComments() {
             commentList.innerHTML = '<p>Tidak ada komentar yang tersedia.</p>';
         }
     });
+
+    // Hide username input if user has already commented
+    const usernameInput = document.getElementById('username');
+    if (usernameInput) {
+        usernameInput.style.display = currentUsername ? 'none' : 'block';
+    }
 }
 
 // Function to show reply form
@@ -127,18 +152,26 @@ window.showReplyForm = function(encodedId, replyToName) {
 // Function to add reply to Firebase
 window.addReply = function(commentId, replyToName) {
     const encodedId = encodeId(commentId);
-    const replyUsername = document.getElementById(`replyUsername-${encodedId}`).value;
     const replyText = document.getElementById(`replyText-${encodedId}`).value;
 
-    if (replyUsername === '' || replyText === '') {
-        alert('Harap isi nama dan balasan!');
+    if (currentUsername === '' && document.getElementById(`replyUsername-${encodedId}`)) {
+        currentUsername = document.getElementById(`replyUsername-${encodedId}`).value;
+    }
+
+    if (currentUsername === '') {
+        alert('Harap isi nama!');
+        return;
+    }
+
+    if (replyText === '') {
+        alert('Harap isi balasan!');
         return;
     }
 
     const replyRef = push(ref(database, `comments/${commentId}/replies`));
 
     set(replyRef, {
-        username: replyUsername,
+        username: currentUsername,
         text: replyText,
         timestamp: new Date().toISOString(),
         replies: {},
@@ -149,7 +182,6 @@ window.addReply = function(commentId, replyToName) {
         console.error("Error writing new reply to Firebase Database", error);
     });
 
-    document.getElementById(`replyUsername-${encodedId}`).value = '';
     document.getElementById(`replyText-${encodedId}`).value = '';
 }
 
@@ -169,7 +201,24 @@ window.deleteComment = function(path) {
 }
 
 // Load comments on window load
-window.onload = displayComments;
+window.onload = function() {
+    // Check if there's a stored username in localStorage
+    const storedUsername = localStorage.getItem('username');
+    if (storedUsername) {
+        currentUsername = storedUsername;
+        const usernameInput = document.getElementById('username');
+        if (usernameInput) {
+            usernameInput.style.display = 'none';
+        }
+    }
+    displayComments();
+};
 
 // Expose addComment function to window
-window.addComment = addComment;
+window.addComment = function() {
+    addComment();
+    // Store username in localStorage
+    if (currentUsername) {
+        localStorage.setItem('username', currentUsername);
+    }
+};
