@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BEM FDA OFFICIAL 2024</title>
+    <link
+      rel="icon"
+      href="https://res.cloudinary.com/dr8dzahhw/image/upload/v1724736453/qxa0eckzsqmvqvs2ycsa.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div
+        class="logo-left"
+        onclick="window.open('https://uhnsugriwa.ac.id/');"
+        style="cursor: pointer"
+      >
+        <img
+          src="https://res.cloudinary.com/dr8dzahhw/image/upload/v1724736625/rclimerx96mykamipbrg.png"
+          alt="Logo Left"
+        />
+      </div>
+      <div class="title">
+        <h1>LKMM-TD 2024</h1>
+      </div>
+      <div
+        class="logo-right"
+        onclick="window.open('https://www.instagram.com/orkemas_fda/');"
+        style="cursor: pointer"
+      >
+        <img
+          src="https://res.cloudinary.com/dr8dzahhw/image/upload/v1724736600/hfk5zbffcfgh5p0dcwqa.png"
+          alt="Logo Right"
+        />
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="dokum-utama">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/imgtourl-c16ed.appspot.com/o/images%2FP1210459.JPG?alt=media&token=c9701329-4f66-4005-aab4-ed8085bd152a"
+          alt="LKMM-TD"
+        />
+      </div>
+      <div class="text-caption">
+        <p>
+          &nbsp;&nbsp;&nbsp; Halo seluruh civitas akademika Fakultas Dharma
+          Acarya, Universitas Hindu Negeri I Gusti Bagus Sugriwa Denpasar!
+          <br /><br />
+          Telah sukses dilaksanakan kegiatan Latihan Kepemimpinan Manajemen
+          Mahasiswa Tingkat Dasar (LKMM-TD) Fakultas Dharma Acarya 2024 pada
+          tanggal 20-22 September 2024. Dengan mengusung tema "Dharmaning Yukti
+          Senapati" yang bermakna "Kepemimpinan Bijaksana Berdasarkan Dharma,"
+          kegiatan ini bertujuan untuk membentuk generasi pemimpin yang tidak
+          hanya cerdas, tetapi juga bijaksana dalam bertindak sesuai dengan
+          nilai-nilai Dharma.
+        </p>
+      </div>
+      <div class="dokum-kegiatan">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/imgtourl-c16ed.appspot.com/o/images%2FP1200107.JPG?alt=media&token=c94945a2-6ca8-446f-9667-9bb9b2bb1a07"
+          alt="lkmm-td"
+        />
+        <br />
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/imgtourl-c16ed.appspot.com/o/images%2FP1200103.JPG?alt=media&token=458f1eee-ab41-4427-a833-4d2cc04cdc60"
+          alt="lkmm-td"
+        />
+      </div>
+    </div>
+    <div class="elemen-foto">
+      <h2>Foto Dokumentasi</h2>
+      <p>
+        Masukkan Password untuk melihat foto dokumentasinya <br />Kenapa
+        berpasword karena menyangkut privasi seseorang.
+      </p>
+      <div class="input-container">
+        <input type="text" id="password" placeholder="Masukkan Password" />
+        <button onclick="checkPassword()">Submit</button>
+      </div>
+      <div id="message" class="error"></div>
+      <div id="link" class="link iframe-container">
+        <iframe
+          src="https://drive.google.com/embeddedfolderview?id=1IM0Qj3IL19ImcQxywlgyPIx9cN37Va97#grid"
+        ></iframe>
+      </div>
+    </div>
+    <footer>
+      <div class="bawah">
+        <div class="footer-left">
+          <p>
+            <a href="#" style="cursor: block">&copy; Bem fda 2024</a>
+          </p>
+        </div>
+        <div class="footer-right">
+          <nav>
+            <ul>
+              <li>
+                <a href="/landing/home.html">Home</a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/bemfda?igsh=MWQ3Z2RuN2diZHYycg=="
+                  >Instagram Kami</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function checkPassword() {
+        const password = document.getElementById("password").value;
+        const message = document.getElementById("message");
+        const link = document.getElementById("link");
+
+        if (password === "lkmmsukses") {
+          message.textContent = "";
+          link.style.display = "block";
+        } else {
+          message.textContent = "Password salah, coba lagi.";
+          link.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
