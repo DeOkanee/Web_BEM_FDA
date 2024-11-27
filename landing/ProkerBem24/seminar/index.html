@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BEM FDA OFFICIAL 2024</title>
+    <link
+      rel="icon"
+      href="https://res.cloudinary.com/dr8dzahhw/image/upload/v1724736453/qxa0eckzsqmvqvs2ycsa.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div
+        class="logo-left"
+        onclick="window.open('https://uhnsugriwa.ac.id/');"
+        style="cursor: pointer"
+      >
+        <img
+          src="https://res.cloudinary.com/dr8dzahhw/image/upload/v1724736625/rclimerx96mykamipbrg.png"
+          alt="Logo Left"
+        />
+      </div>
+      <div class="title">
+        <h1>SEMINAR 2024</h1>
+      </div>
+      <div
+        class="logo-right"
+        onclick="window.open('https://www.instagram.com/orkemas_fda/');"
+        style="cursor: pointer"
+      >
+        <img
+          src="https://res.cloudinary.com/dr8dzahhw/image/upload/v1724736600/hfk5zbffcfgh5p0dcwqa.png"
+          alt="Logo Right"
+        />
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="dokum-utama">
+        <img
+          src="https://res.cloudinary.com/dwpnsfghy/image/upload/v1732668781/pxk8z0yhvlv4bdvg8l0k.jpg"
+          alt="SEMINAR"
+        />
+      </div>
+      <div class="text-caption">
+        <p>
+          &nbsp;&nbsp;&nbsp; Halo seluruh civitas akademika Fakultas Dharma
+          Acarya, Universitas Hindu Negeri I Gusti Bagus Sugriwa Denpasar!
+          <br /><br />
+          Telah terlaksana Seminar Badan Eksekutif Mahasiswa Fakultas Dharma
+          Acarya pada Sabtu, 18 Maret 2023 yang mengangkat tema "Tantangan
+          Pendidikan Berbasis Budaya di Era Digital: Menjembatani perbedaan
+          antara tradisi dan modernitas”. Pembukaan acara yang luar biasa
+          diiringi dengan tari topeng arsa wijaya dan dibuka langsung oleh Dekan
+          Fakultas Dharma Acarya dengan Pemukulan Gong. Penyampaian materi yang
+          sangat luar biasa dan menarik oleh para pemateri yaitu, Bapak I Gede
+          Tilem Pastika, S. Sn., M. Sn, dan Ibu Ida Ayu Nindia Brahmani Putri,
+          S.Pd.,M.Pd. Serta antusias peserta dalam menerima materi yang di
+          paparkan oleh pemateri kita yang sangat luar biasa. 
+          <br/>
+          Dengan mengambil konsep Pendidikan dan budaya, para peserta diharapkan dapat menerima
+          dan menerapkan dengan baik pada kehidupan beragama.
+        </p>
+      </div>
+      <div class="dokum-kegiatan">
+        <img
+          src="https://res.cloudinary.com/dwpnsfghy/image/upload/v1732668925/muu5sewxwfduf6dyh5ko.jpg"
+          alt="SEMINAR"
+        />
+        <br />
+        <img
+          src="https://res.cloudinary.com/dwpnsfghy/image/upload/v1732668975/zuy4hpkqibtntm40qekz.jpg"
+          alt="Seminar"
+        />
+      </div>
+    </div>
+    <div class="elemen-foto">
+      <h2>Foto Dokumentasi</h2>
+      <p>
+        Masukkan Password untuk melihat foto dokumentasinya <br />Kenapa
+        berpasword karena menyangkut privasi seseorang.
+      </p>
+      <div class="input-container">
+        <input type="text" id="password" placeholder="Masukkan Password" />
+        <button onclick="checkPassword()">Submit</button>
+      </div>
+      <div id="message" class="error"></div>
+      <div id="link" class="link iframe-container">
+        <iframe
+          src="https://drive.google.com/embeddedfolderview?id=1o8-lu85wDsS0qn4VNhxuokYN9_Z7PE8g#grid"
+        ></iframe>
+      </div>
+    </div>
+    <footer>
+      <div class="bawah">
+        <div class="footer-left">
+          <p>
+            <a href="#" style="cursor: block">&copy; Bem fda 2024</a>
+          </p>
+        </div>
+        <div class="footer-right">
+          <nav>
+            <ul>
+              <li>
+                <a href="/landing/home.html">Home</a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/bemfda?igsh=MWQ3Z2RuN2diZHYycg=="
+                  >Instagram Kami</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function checkPassword() {
+        const password = document.getElementById("password").value;
+        const message = document.getElementById("message");
+        const link = document.getElementById("link");
+
+        if (password === "seminarsukses") {
+          message.textContent = "";
+          link.style.display = "block";
+        } else {
+          message.textContent = "Password salah, coba lagi.";
+          link.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
